@@ -2,4 +2,4 @@
 
 Data limite 01/02/2023
 
-API utilizada: <a href="json-server-md3.onrender.com">clique aqui</a>
+API utilizada: <a href="https://json-server-md3.onrender.com/">clique aqui</a>
