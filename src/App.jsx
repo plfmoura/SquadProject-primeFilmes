@@ -1,13 +1,16 @@
 import './App.css'
-import ExemploComponent from './components/ExemploComponent'
-import SegundoExemplo from './components/SegundoExemplo'
+import { Outlet } from 'react-router-dom'
 
 function App() {
 
   return (
     <div className="App">
-      <ExemploComponent />
-      <SegundoExemplo />
+      <div className="navBarContainer">
+        <p>Isso é um menu</p>
+      </div>
+      <h1>O melhor site de cinema de todos os tempos, alugue e assista em casa.</h1>
+      <Outlet />
+      <p>rodapé</p>
     </div>
   )
 }
