@@ -1,7 +1,8 @@
-import { Box } from '@mui/material'
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
-import HomeCard from '../components/HomeCard'
+import HomeCard from '../../components/HomeCard'
+import HomeCardPrincipal from '../../components/HomeCardPrincipal'
+import style from './home.module.css'
 
 export default function Home() {
 
@@ -18,19 +19,20 @@ export default function Home() {
 
   return (
     <>
-      <div className="popularArea">
-        
+      <div className={style.popularArea}>
+        <HomeCardPrincipal />
+        <HomeCardPrincipal />
       </div>
-      <div style={{marginTop: "10%", backgroundColor: "#f1f1f1"}}>
+      <div className={style.filmesContainer}>
         <h1>Filmes em cartaz</h1>
         <p>Trailers e horários dos filmes em cartaz nos cinemas</p>
-        <Box display={"flex"} flexWrap={"wrap"} margin={'2rem'} alignItems={"center"} justifyContent={"center"}>
+        <div className={style.filmesContent}>
           {
             movies.map(( item ) => 
-              <HomeCard title={item.nome} image={item.img[0]} />
+            <HomeCard title={item.nome} image={item.img[0]} />
             )
           }
-        </Box>
+        </div>
       </div>
     </>
   )
