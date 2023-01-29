@@ -1,0 +1,14 @@
+.cardContainer {
+    background-color: red;
+}
+
+.homeCard {
+    margin: 1rem 1rem 5rem;
+    line-break: loose;
+}
+
+.homeCard:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+    transition: all 250ms linear;
+}
