@@ -9,7 +9,7 @@ import style from './card.module.css'
 
 export default function HomeCard({ title, sub, image }) {
   return (
-    <Card sx={{ width: 220, height: 320, display: "flex", flexDirection: "column", justifyContent: "space-between"}} className={style.homeCard}>
+    <Card sx={{ width: 220, height: 300, display: "flex", flexDirection: "column", justifyContent: "space-between"}} className={style.homeCard}>
       <CardMedia
         sx={{ height: 180 }}
         image={ image }
@@ -22,10 +22,6 @@ export default function HomeCard({ title, sub, image }) {
           { sub }
         </Typography>
       </CardContent>
-      <CardActions>
-        <Button size="small">Share</Button>
-        <Button size="small">Learn More</Button>
-      </CardActions>
     </Card>
   );
 }

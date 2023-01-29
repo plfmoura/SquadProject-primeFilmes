@@ -1,4 +1,20 @@
 .titulo {
     margin-top: 50%;
-    color: red;
+    color: black;
+}
+
+.filmesContainer {
+    background-color: white;
+    width: 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.filmesContent {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: stretch;
+    flex-wrap: wrap;
+    margin: 0 auto;
 }
