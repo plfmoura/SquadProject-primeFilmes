@@ -5,16 +5,17 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import style from './card.module.css'
 
 export default function HomeCard({ title, sub, image }) {
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card sx={{ width: 220, height: 320, display: "flex", flexDirection: "column", justifyContent: "space-between"}} className={style.homeCard}>
       <CardMedia
-        sx={{ height: 140 }}
+        sx={{ height: 180 }}
         image={ image }
       />
       <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
+        <Typography gutterBottom variant="h6" component="div" className={style.titleCard}>
           { title }
         </Typography>
         <Typography variant="body2" color="text.secondary">

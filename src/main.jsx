@@ -3,10 +3,10 @@ import ReactDOM from 'react-dom/client'
 import App from './App'
 import './index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import Home from './routes/Home'
-import Filmes from './routes/Filmes'
-import Loja from './routes/Loja'
-import ErrorPage from './routes/ErrorPage'
+import Filmes from './routes/Filmes/Filmes'
+import Loja from './routes/Loja/Loja'
+import ErrorPage from './routes/ErrorPage/ErrorPage'
+import Home from './routes/Home/Home'
 
 const router = createBrowserRouter([
   {
