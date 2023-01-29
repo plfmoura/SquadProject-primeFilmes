@@ -29,7 +29,7 @@ const filmes = ["Ação",
   "Romance",
   "Terror",
   "Thriller"]
-
+  
 export default function NavBar() {
   return (
     <div className={style.navBarContainer}>
