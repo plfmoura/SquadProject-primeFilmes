@@ -25,13 +25,14 @@ export default function Home() {
       </div>
       <div className={style.filmesContainer}>
         <h1>Filmes em cartaz</h1>
-        <p>Trailers e horários dos filmes em cartaz nos cinemas</p>
+        <p>Veja o nosso Top 10 filmes mais assistidos da semana.</p>
         <div className={style.filmesContent}>
           {
-            movies.map(( item ) => 
-            <HomeCard title={item.nome} image={item.img[0]} />
+            movies.map(( item, key ) => 
+            <HomeCard title={item.nome} image={item.img[0]} id={key +1} />
             )
           }
+        <p>Ver mais...</p>
         </div>
       </div>
     </>
