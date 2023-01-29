@@ -1,0 +1,81 @@
+.navBarContainer {
+    background-color: #333;
+    width: 100%;
+    height: 17vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-inline: 2rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.firstContent,
+.secondContent {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.secondContent {
+    margin-top: 1rem;
+    border-top: 1px solid #F2F7F2;
+    padding-top: .5rem;
+}
+
+.filmesAtalho {
+    display: flex;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 80%;
+    margin-top: .5rem;
+}
+
+.filmesAtalho p {
+    margin-inline-end: 1rem;
+    font-size: .75rem;
+    color: #F2F7F2;
+}
+
+.ticketLogo {
+    animation: color 5s ease-in-out infinite;
+}
+
+@keyframes color {
+    0%, 100% {
+        color: #A63D40;
+    }
+    50% {
+        color: #F2F7F2;
+    }
+}
+
+.menuNavigation {
+    list-style: none;
+    display: flex;
+}
+
+.menuNavigation li {
+    margin-inline: 1.5rem;
+    font-size: 1.05rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+.searchContainer {
+    padding: .2rem;
+    background-color: #fff;
+    border-radius: .25rem;
+    display: flex;
+    align-items: center;
+    box-shadow: #333 -15px 0px 10px 0px
+}
+
+.searchContainer input {
+    border: none;
+    outline: 0;
+    padding: .4rem;
+    padding-right: 3.5rem;
+    margin-left: .5rem;
+}

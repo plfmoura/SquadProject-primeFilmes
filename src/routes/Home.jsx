@@ -1,9 +1,18 @@
-import React from 'react'
+import { Box } from '@mui/material'
+import React, { useState } from 'react'
+import HomeCard from '../components/HomeCard'
+
+const [ movies, setMovies ] = useState([])
 
 export default function Home() {
   return (
     <div>
-      <h1>Página Home</h1>
+      <Box display={"flex"}>
+        {
+
+        }
+        <HomeCard />
+      </Box>
     </div>
   )
 }
