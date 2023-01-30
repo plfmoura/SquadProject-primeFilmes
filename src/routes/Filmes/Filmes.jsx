@@ -18,7 +18,6 @@ export default function Filmes() {
 
   return (
     <div className={style.filmesContainer}>
-
       <h1 className={style.titulo}>Catálogo de filmes</h1>
       <div className={style.filmesContent}>
         {
@@ -31,7 +30,6 @@ export default function Filmes() {
           )
         }
       </div>
-
     </div>
   )
 }
