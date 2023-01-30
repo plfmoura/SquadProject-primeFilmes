@@ -35,7 +35,7 @@ export default function Home() {
         <div className={style.filmesContent}>
           {
             movies.map(( item, key ) => 
-            <HomeCard title={item.nome} image={item.img[0]} id={key +1} />
+            <HomeCard title={item.nome} image={item.img[0]} id={key +1} key={key} />
             )
           }
         <p>Ver mais...</p>
