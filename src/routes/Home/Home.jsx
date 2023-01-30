@@ -2,6 +2,7 @@ import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import HomeCard from '../../components/HomeCard'
 import HomeCardPrincipal from '../../components/HomeCardPrincipal'
+import HomeCarrousel from '../../components/HomeCarrousel'
 import style from './home.module.css'
 
 export default function Home() {
@@ -10,7 +11,7 @@ export default function Home() {
 
   const getMovies = () => {
     let url = `https://json-server-md3.onrender.com/filmes`
-    axios.get(url).then((response) => setMovies(response.data))
+    axios.get(url).then((response) => setMovies(response.data)).catch(console.error("nada nada"))
   }
 
   useEffect(() => {
@@ -19,6 +20,7 @@ export default function Home() {
 
   return (
     <>
+      <HomeCarrousel />
       <div className={style.popularArea}>
         <HomeCardPrincipal />
         <HomeCardPrincipal />
