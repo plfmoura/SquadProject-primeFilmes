@@ -1,9 +1,8 @@
 .popularArea {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     margin: 12% auto 2rem;
-    width: 95%;
-
+    width: 90%;
 }
 
 .filmesContainer {

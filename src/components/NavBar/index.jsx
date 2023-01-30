@@ -1,6 +1,7 @@
 import { Search } from '@mui/icons-material'
 import LocalActivityIcon from '@mui/icons-material/LocalActivity';
 import React from 'react'
+import { NavLink } from 'react-router-dom';
 import style from './navBar.module.css'
 
 const filmes = ["Ação",
@@ -36,10 +37,10 @@ export default function NavBar() {
       <div className={style.firstContent}>
         <LocalActivityIcon fontSize='large' className={style.ticketLogo}/>
         <ul className={style.menuNavigation}>
-          <li className="menuItem">Home</li>
-          <li className="menuItem">Filmes</li>
-          <li className="menuItem">Loja</li>
-          <li className="menuItem">Lançamentos</li>
+          <li className="menuItem"><NavLink to="/"end>Home</NavLink></li>       
+          <li className="menuItem"><NavLink to="/filmes" end>Filmes</NavLink></li>          
+          <li className="menuItem"><NavLink to="/loja" end>Loja</NavLink></li>       
+          <li className="menuItem"><NavLink to="/lancamentos" end>Lançamentos</NavLink></li>       
         </ul>
         <input type="button" value="Login" />
       </div>

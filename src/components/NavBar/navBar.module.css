@@ -2,7 +2,7 @@
     background-color: #333;
     position: fixed;
     z-index: 999;
-    width: 100%;
+    width: 100vw;
     height: 7rem;
     display: flex;
     flex-direction: column;
