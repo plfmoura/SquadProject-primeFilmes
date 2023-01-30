@@ -3,6 +3,7 @@ import LocalActivityIcon from '@mui/icons-material/LocalActivity';
 import React from 'react'
 import { NavLink } from 'react-router-dom';
 import ButtonComponent from './ButtonComponent';
+import LoginModal from './LoginModal';
 import style from './navBar.module.css'
 
 const filmes = ["Ação",
@@ -43,7 +44,7 @@ export default function NavBar() {
           <li><NavLink className={style.menuItem} to="/loja" end>Loja</NavLink></li>       
           <li><NavLink className={style.menuItem} to="/lancamentos" end>Lançamentos</NavLink></li>       
         </ul>
-      <ButtonComponent variant={"secondary"} value={"Login"} />
+      <LoginModal />
       </div>
       <div className={style.secondContent}>
           <div className={style.filmesAtalho}>
