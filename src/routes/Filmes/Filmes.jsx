@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import style from './filmes.module.css'
 import axios from 'axios'
-import HomeCard from '../../components/HomeCard'
+import FilmesCard from '../../components/FilmesCard'
 
 export default function Filmes() {
 
@@ -17,17 +17,22 @@ export default function Filmes() {
   }, [])
 
   return (
-<>
-    <div>
-      <h1 className={style.titulo}>Catálogo de Filmes</h1>
+    <div className={style.filmesContainer}>
+
+      <h1 className={style.titulo}>Catálogo de filmes</h1>
+      <div className={style.filmesContent}>
+        {
+          movies.map(( item ) => 
+            <FilmesCard 
+              image={item.img[0]} 
+              title={item.nome}
+              preco={item.preco}
+              />
+          )
+        }
+      </div>
+
     </div>
-        <div className={style.filmesContent}>
-          {
-            movies.map((item) => 
-            <HomeCard title={item.nome} image={item.img[2]}/>
-            )
-          }
-        </div>
-  </>
   )
 }
+
