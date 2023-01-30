@@ -20,7 +20,11 @@ export default function Home() {
 
   return (
     <>
-      <HomeCarrousel />
+    {/* {
+      movies.get((item) => console.log(item[1].img))
+      // <HomeCarrousel />
+
+    } */}
       <div className={style.popularArea}>
         <HomeCardPrincipal />
         <HomeCardPrincipal />
