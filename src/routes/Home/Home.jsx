@@ -28,9 +28,8 @@ export default function Home() {
     getMovies()
   }, [])
 
-
   return (
-    <>
+    <div className={style.home}>
       <HomeCarrousel />
       <article className={style.popularContainer}>
         <div className={style.alingTitle}>
@@ -70,6 +69,6 @@ export default function Home() {
         }          
         </div>
       </div>
-    </>
+    </div>
   )
 }

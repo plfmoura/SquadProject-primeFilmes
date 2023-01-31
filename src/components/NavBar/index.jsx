@@ -6,40 +6,30 @@ import ButtonComponent from './ButtonComponent';
 import LoginModal from './LoginModal';
 import style from './navBar.module.css'
 
-const filmes = ["Ação",
+const filmes = [
+  "Ação",
   "Aventura",
-  "Cinema de arte",
-  "Chanchada",
   "Comédia",
-  "Comédia de ação",
-  "Comédia de terror",
-  "Comédia dramática",
-  "Comédia romântica",
-  "Dança",
   "Documentário",
-  "Docuficção",
   "Drama",
   "Espionagem",
   "Faroeste",
   "Fantasia",
-  "Fantasia científica",
   "Ficção científica",
-  "Filmes com truques",
-  "Filmes de guerra",
   "Mistério",
   "Musical",
   "Filme policial",
   "Romance",
-  "Terror",
-  "Thriller"]
+  "Terror"
+  ]
   
 export default function NavBar() {
   return (
     <div className={style.navBarContainer}>
       <div className={style.firstContent}>
-        <div style={{backgroundColor: "red", display: "flex"}}>
+        <div className={style.containerLogo}>
           <LocalActivityIcon fontSize='large' className={style.ticketLogo}/>
-          <p className={style.menuItem}>Prime Video</p>
+          <p className={style.menuItem}>Prime Filmes</p>
         </div>
         <ul className={style.menuNavigation}>
           <li><NavLink className={style.menuItem} to="/" end>Home</NavLink></li>       

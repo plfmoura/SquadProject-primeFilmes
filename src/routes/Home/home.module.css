@@ -1,9 +1,15 @@
+.home {
+    width: 100%;
+}
+
 .popularContainer {
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin: 3% auto 2rem;
     width: 100%;
+    max-width: 100vw;
+
     background-color: #e7e5e5;
 }
 
