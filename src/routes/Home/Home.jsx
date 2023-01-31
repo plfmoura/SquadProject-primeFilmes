@@ -8,41 +8,34 @@ import style from './home.module.css'
 export default function Home() {
 
   const [ movies, setMovies ] = useState([])
+  const [ top, setTop ] = useState([])
 
   const getMovies = () => {
     let url = `https://json-server-md3.onrender.com/filmes`
-    axios.get(url).then((response) => setMovies(response.data)).catch(console.error("nada nada"))
+    axios.get(url).then((response) => setMovies(response.data))
   }
-
+  
   useEffect(() => {
     getMovies()
   }, [])
 
-  let topTenMovies = []
-  for(let i = 0; i < 10; i++){
-    topTenMovies.push(movies[i])
-  }
 
   return (
     <>
-    {/* {
-      movies.get((item) => console.log(item[1].img))
-      // <HomeCarrousel />
-
-    } */}
+      <HomeCarrousel />
       <div className={style.popularArea}>
-        <HomeCardPrincipal />
-        <HomeCardPrincipal />
+        <HomeCardPrincipal image={"https://d2d7ho1ae66ldi.cloudfront.net/ArquivoNoticias/2cfcae7c-9731-11ed-aa6e-9587410378a2/chrome_2023-01-18_10-02-45.jpg"} />
+        <HomeCardPrincipal image={"https://i.ytimg.com/vi/IK1sEiHodZg/maxresdefault.jpg"} />
       </div>
       <div className={style.filmesContainer}>
         <h1>Filmes em cartaz</h1>
         <p>Veja o nosso Top 10 filmes mais assistidos da semana.</p>
         <div className={style.filmesContent}>
-          {
-            topTenMovies.map(( item, key ) => 
-            <HomeCard title={item.nome} image={item.img[0]} id={key +1} key={key} />
-            )
-          }
+        {
+          movies.map(( item ) => 
+            <HomeCard image={item.img[0]} key={item.id} id={item.id} title={item.nome} />
+          )
+        }          
         </div>
       </div>
     </>

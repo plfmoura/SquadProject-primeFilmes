@@ -1,5 +1,10 @@
 .carouselImage {
     width: 100vw;
-    height: 70vh;
+    height: 75vh;
     object-fit: cover
+}
+
+.carouselImage:hover {
+    transform: scale(1.01);
+    transition: all 1s ease-in-out;
 }

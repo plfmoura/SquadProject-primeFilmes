@@ -1,10 +1,10 @@
 import React from 'react'
 import style from './homeCardPrincipal.module.css'
 
-export default function HomeCardPrincipal() {
+export default function HomeCardPrincipal({ image, alt }) {
   return (
     <div className={style.cardContainer}>
-      <h1>CardConntainer</h1>
+      <img src={image} alt={alt} width="100%" height="100%"/>
     </div>
   )
 }
