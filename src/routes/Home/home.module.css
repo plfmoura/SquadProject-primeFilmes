@@ -1,28 +1,59 @@
+.popularContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 3% auto 2rem;
+    width: 100%;
+    background-color: #e7e5e5;
+}
+
+.popularContainer section p {
+    font-size: 18px;
+}
+
+.alingTitle {
+    margin-left: 5%;
+}
+
+.alingTitle h2 {
+    font-size: 2.2rem;
+}
+
+.alingTitle p {
+    font-size: 1.2rem;
+}
+
 .popularArea {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    margin: 12% auto 2rem;
+    align-items: center;
     width: 90%;
+    margin: 0 auto;
 }
+
+.popularArea section {
+    display: flex;
+}
+
+.popularArea section div {
+    margin-inline: 1rem;
+    text-align: justify;
+}
+
+.popularArea span {
+    font-weight: bold;
+}
+
+.popularArea section:nth-child(2) {
+    flex-direction: row-reverse;
+    margin-top: 4rem;
+} 
 
 .filmesContainer {
     background-color: #e7e5e5;
     width: 100vw;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-.filmesContainer h1 {
-    margin-top: 2rem;
-    font-size: 2.2rem;
-}
-
-.filmesContainer p {
-    font-size: 1.2rem;
-}
-
-.filmesContainer h1,
-.filmesContainer p {
-    margin-left: 5%;
 }
 
 .filmesContent {
