@@ -8,12 +8,21 @@ import style from './home.module.css'
 export default function Home() {
 
   const [ movies, setMovies ] = useState([])
-  const [ top, setTop ] = useState([])
+  // const [ top, setTop ] = useState([])
 
   const getMovies = () => {
-    let url = `https://json-server-md3.onrender.com/filmes`
-    axios.get(url).then((response) => setMovies(response.data))
+    var endPoints = []
+    for(let i = 1; i < 11; i++) {
+        endPoints.push(`https://json-server-md3.onrender.com/filmes/${i}/`)
+    }
+    axios.all(endPoints
+        .map((endPoint) => axios
+            .get(endPoint)))
+            .then((response) => setMovies(response))
+            .catch((error) => console.log(error))
   }
+
+  console.log(movies)
   
   useEffect(() => {
     getMovies()
@@ -32,8 +41,8 @@ export default function Home() {
         <p>Veja o nosso Top 10 filmes mais assistidos da semana.</p>
         <div className={style.filmesContent}>
         {
-          movies.map(( item ) => 
-            <HomeCard image={item.img[0]} key={item.id} id={item.id} title={item.nome} />
+          movies.map(( item, key ) => 
+            <HomeCard image={item.data.img[0]} key={key} id={item.data.id} title={item.data.nome} />
           )
         }          
         </div>

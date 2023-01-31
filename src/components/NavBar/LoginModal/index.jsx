@@ -11,9 +11,9 @@ export default function LoginModal() {
 
   return (
     <>
-      <Button variant="secondary" onClick={handleShow}>
+      <p onClick={handleShow} style={{color: "#fff", cursor: "pointer", textTransform: "uppercase"}}>
         Login
-      </Button>
+      </p>
 
       <Modal show={show} onHide={handleClose} style={{marginTop: "8%"}}>
         <Modal.Body 

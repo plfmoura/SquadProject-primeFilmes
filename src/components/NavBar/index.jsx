@@ -37,14 +37,16 @@ export default function NavBar() {
   return (
     <div className={style.navBarContainer}>
       <div className={style.firstContent}>
-        <LocalActivityIcon fontSize='large' className={style.ticketLogo}/>
+        <div style={{backgroundColor: "red", display: "flex"}}>
+          <LocalActivityIcon fontSize='large' className={style.ticketLogo}/>
+          <p className={style.menuItem}>Prime Video</p>
+        </div>
         <ul className={style.menuNavigation}>
           <li><NavLink className={style.menuItem} to="/" end>Home</NavLink></li>       
           <li><NavLink className={style.menuItem} to="/filmes" end>Filmes</NavLink></li>          
           <li><NavLink className={style.menuItem} to="/loja" end>Loja</NavLink></li>       
-          <li><NavLink className={style.menuItem} to="/lancamentos" end>Lançamentos</NavLink></li>       
+          <LoginModal />
         </ul>
-      <LoginModal />
       </div>
       <div className={style.secondContent}>
           <div className={style.filmesAtalho}>

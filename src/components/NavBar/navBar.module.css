@@ -1,5 +1,5 @@
 .navBarContainer {
-    background-color: #333;
+    background-color: #222;
     position: fixed;
     z-index: 999;
     width: 100vw;
@@ -10,7 +10,7 @@
     align-items: center;
     padding-inline: 2rem;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    box-shadow: 0 3px 5px 0 rgb(0 0 0 / 33%), 0 2px 10px 0 rgb(0 0 0 / 33%);
 }
 
 .firstContent,
@@ -57,14 +57,16 @@
 .menuNavigation {
     list-style: none;
     display: flex;
+    justify-content: space-evenly;
+    width: 40%;
 }
 
 .menuItem {
-    margin-inline: 1.5rem;
     font-size: 1.05rem;
     color: #fff;
     cursor: pointer;
     text-decoration: none;
+    text-transform: uppercase;
 }
 
 .searchContainer {

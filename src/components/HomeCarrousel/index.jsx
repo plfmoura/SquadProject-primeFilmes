@@ -13,8 +13,8 @@ function HomeCarrousel() {
   return (
     <Carousel style={{marginTop: "9.5%"}}>
       {
-        dataCarousel.map(( item ) => 
-          <Carousel.Item interval={5000}>
+        dataCarousel.map(( item, key ) => 
+          <Carousel.Item interval={5000} key={key}>
             <img
               className={style.carouselImage}
               src={item.image}
