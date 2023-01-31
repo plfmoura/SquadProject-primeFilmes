@@ -4,16 +4,14 @@
 }
 
 .cardContent {
-    position: relative;
     z-index: 1;
     width: 220px;
     height: 360px;
     min-height: 360px;
-    margin: 1rem 1rem 5rem;
-    line-break: loose;
+    margin: 1rem 1rem 2rem;
     display: flex;
     flex-direction: column;
-    background-color: #F2F7F2;
+    background-color: #3a3838;
 }
 
 .cardContent img {
@@ -29,8 +27,11 @@
 }
 
 .titleCard {
-    font-size: 1.2em;
+    font-size: 1.1em;
     font-weight: 400;
+    margin: 1rem auto 0;
+    color: #F2F7F2;
+    width: 90%;
 }
 
 .rankingFilmes {

@@ -18,6 +18,11 @@ export default function Home() {
     getMovies()
   }, [])
 
+  let topTenMovies = []
+  for(let i = 0; i < 10; i++){
+    topTenMovies.push(movies[i])
+  }
+
   return (
     <>
     {/* {
@@ -34,11 +39,10 @@ export default function Home() {
         <p>Veja o nosso Top 10 filmes mais assistidos da semana.</p>
         <div className={style.filmesContent}>
           {
-            movies.map(( item, key ) => 
+            topTenMovies.map(( item, key ) => 
             <HomeCard title={item.nome} image={item.img[0]} id={key +1} key={key} />
             )
           }
-        <p>Ver mais...</p>
         </div>
       </div>
     </>

@@ -7,7 +7,7 @@
 
 .filmesContainer {
     background-color: #e7e5e5;
-    width: 100%;
+    width: 100vw;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
@@ -26,11 +26,13 @@
 }
 
 .filmesContent {
-    width: 95%;
+    text-align: center;
+    max-width: 90%;
+    height: 70vh;
     display: flex;
     align-items: center;
-    justify-content: center;
-    align-content: stretch;
-    flex-wrap: wrap;
+    justify-content: space-between;
+    overflow: auto;
     margin: 0 auto;
+    background-color: #ccc1c1;
 }
