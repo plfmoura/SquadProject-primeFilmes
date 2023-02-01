@@ -8,7 +8,7 @@ export default function Filmes() {
   const [movies, setMovies ] = useState([])
 
   const getMovies = () =>{
-    let url = `https://json-server-md3.onrender.com/alimentos/`
+    let url = `https://json-server-md3.onrender.com/alimentos`
     axios.get(url).then((response) => setMovies(response.data))
   }
 
