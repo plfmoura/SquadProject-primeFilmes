@@ -29,7 +29,7 @@ function Equipe(){
         <br />
         <div className='Redes-sociais'>
         <a href="https://github.com/plfmoura">< FaGithub/></a>
-       <a href="#"><FaInstagramSquare/></a>
+       <a href="https://www.instagram.com/wpeedro/"><FaInstagramSquare/></a>
       <a href="https://www.linkedin.com/in/pedro-moura-48a29819a/"><FaLinkedin/></a>
         </div>
        </center>
