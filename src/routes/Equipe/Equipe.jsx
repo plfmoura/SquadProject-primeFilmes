@@ -47,7 +47,7 @@ function Equipe(){
         <br />
         <div className='Redes-sociais'>
         <a href="https://github.com/m4sterUniverse">< FaGithub/></a>
-       <a href="#"><FaInstagramSquare/></a>
+       <a href=""><FaInstagramSquare/></a>
       <a href="https://www.linkedin.com/in/natan-silva-brito-junior-13720a199/"><FaLinkedin/></a>
         </div>
        </center>
@@ -85,7 +85,7 @@ function Equipe(){
         <br />
         <div className='Redes-sociais'>
         <a href="https://github.com/WillianXG">< FaGithub/></a>
-       <a href="#"><FaInstagramSquare/></a>
+       <a href=""><FaInstagramSquare/></a>
       <a href="https://www.linkedin.com/in/francisco-willian-dos-santos-silva-36072b250/"><FaLinkedin/></a>
         </div>
        </center>
@@ -104,8 +104,8 @@ function Equipe(){
         <br />
         <div className='Redes-sociais'>
         <a href="https://github.com/lacmlopes">< FaGithub/></a>
-       <a href="#"><FaInstagramSquare/></a>
-      <a href="#"><FaLinkedin/></a>
+       <a href=""><FaInstagramSquare/></a>
+      <a href=""><FaLinkedin/></a>
         </div>
        </center>
     </div>
