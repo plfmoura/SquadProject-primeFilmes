@@ -34,7 +34,8 @@ export default function NavBar() {
         <ul className={style.menuNavigation}>
           <li><NavLink className={style.menuItem} to="/" end>Home</NavLink></li>       
           <li><NavLink className={style.menuItem} to="/filmes" end>Filmes</NavLink></li>          
-          <li><NavLink className={style.menuItem} to="/loja" end>Loja</NavLink></li>       
+          <li><NavLink className={style.menuItem} to="/loja" end>Loja</NavLink></li>      
+          <li><NavLink className={style.menuItem} to="/equipe" end>Equipe</NavLink></li>     
           <LoginModal />
         </ul>
       </div>

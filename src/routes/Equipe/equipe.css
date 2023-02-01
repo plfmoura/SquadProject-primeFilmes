@@ -1,0 +1,87 @@
+
+/* CLASS Conteiner*/
+.Conteiner{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    z-index: -15px;
+    
+}
+
+
+/* Class Conteiner e Card*/
+.Conteiner .Card{
+    width:280px;
+    height: 400px;
+    margin: 30px;
+    overflow: hidden;
+    box-shadow:25px rgb(40, 40, 43);
+    border-radius: 15px;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid rgb(12, 1, 1);
+    border-left: 1px solid rgb(5, 0, 3);
+    border-right: 1px solid rgb(8, 1, 1);
+    border-bottom: 1px solid rgb(0, 0, 0);
+   
+}
+
+
+.Conteiner .Card .content .Foto.Redes-sociais{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+    }
+    
+    .Card:hover{
+    background-color: rgb(90, 90, 90);
+    cursor: pointer;
+    transform: scale(1.05);
+    opacity: 1s;
+    transition: all 500ms ease-in-out;
+    }
+    
+
+
+/* Class-das Redes-sociais*/
+.Redes-sociais {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    
+    }
+    
+    .Redes-sociais a{
+    color: black;
+    }
+    
+    
+    .Redes-sociais a:hover{
+        color: white;   
+        }
+        
+
+    
+/* Classe das Imagens*/
+.Foto img{
+    width: 150px;
+    height: 150px;
+    border: 2px solid white;
+    border-radius: 75px;
+   
+}
+
+
+h1{
+    font-size: 45px;
+    padding: 35px;
+}
+h2,h3,p{
+    padding: 2px;
+    font-size: 20px;
+}
