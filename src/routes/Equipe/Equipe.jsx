@@ -6,8 +6,6 @@ import Lucas from '../../components/imagens/Lucas.png.jpeg'
 import './equipe.css'
 import { FaInstagramSquare, FaGithub, FaLinkedin  } from 'react-icons/fa';
 
-
-
 function Equipe(){
     return(
     <>
@@ -54,7 +52,6 @@ function Equipe(){
     </div>
 </div>
 
-
 <div className='Card'>
     <div className='content'>
         <div className='Foto'>
@@ -72,7 +69,6 @@ function Equipe(){
        </center>
     </div>
 </div>
-
 
 <div className='Card'>
     <div className='content'>
@@ -92,7 +88,6 @@ function Equipe(){
     </div>
 </div>
 
-
 <div className='Card'>
     <div className='content'>
         <div className='Foto'>
@@ -111,10 +106,7 @@ function Equipe(){
     </div>
 </div>
 
-
-
 </div>
-
 
     </>
     )
