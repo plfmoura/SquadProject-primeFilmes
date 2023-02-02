@@ -9,7 +9,7 @@ import { FaInstagramSquare, FaGithub, FaLinkedin } from "react-icons/fa";
 function Equipe() {
   return (
     <>
-      <center>
+     <center>
         <h1 className={styles.TituloPrincipal}>Nossa Equipe</h1>
       </center>
       <div className={styles.container}>
