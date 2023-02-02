@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import style from './loja.module.css'
 import axios from 'axios'
-import FilmesCard from '../../components/FilmesCard'
+import FilmesCard from '../../components/LojaCard'
 
 export default function Filmes() {
 
@@ -17,9 +17,9 @@ export default function Filmes() {
   }, [])
 
   return (
-    <div className={style.filmesContainer}>
-      <h1 className={style.titulo}>Catálogo de filmes</h1>
-      <div className={style.filmesContent}>
+    <div className={style.lojaContainer}>
+      <h1 className={style.titulo}>Catálogo de Produtos</h1>
+      <div className={style.lojaContent}>
         {
           movies.map(( item ) => 
             <FilmesCard 

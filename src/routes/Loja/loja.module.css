@@ -1,4 +1,4 @@
-.filmesContainer {
+.lojaContainer {
     background-color: white;
     width: 100%;
     margin-top: 12%;
@@ -13,7 +13,7 @@
     margin-bottom: 5%;
 }
 
-.filmesContent {
+.lojaContent {
     width: 100%;
     display: flex;
     align-items: center;
