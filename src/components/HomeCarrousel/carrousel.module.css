@@ -1,10 +1,29 @@
 .carouselImage {
     width: 100vw;
-    height: 75vh;
-    object-fit: cover
+    height: 82vh;
+    object-fit: cover;
 }
 
 .carouselImage:hover {
     transform: scale(1.01);
     transition: all 1s ease-in-out;
+}
+
+.captionContainer {
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.captionContainer h3 {
+    margin-right: 100%;
+    white-space: nowrap;
+    transform: scale(2);
+}
+
+.captionContainer p {
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.555);
+    outline: thick double #fafafa88
 }
