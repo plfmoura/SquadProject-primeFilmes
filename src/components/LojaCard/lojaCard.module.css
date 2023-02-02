@@ -1,0 +1,71 @@
+.cardContainer {
+    display: flex;
+    justify-content: right;
+}
+
+.cardContent {
+    position: relative;
+    z-index: 1;
+    width: 220px;
+    height: 360px;
+    min-height: 360px;
+    margin: 1rem 1rem 5rem;
+    line-break: loose;
+    display: flex;
+    flex-direction: column;
+    background-color: #F2F7F2;
+}
+
+.cardContent img {
+    height: 80%;
+    max-height: 80%;
+    object-fit: cover;
+}
+
+.cardContainer:hover {
+    transform: scale(1.02);
+    cursor: pointer;
+    transition: all 250ms linear;
+}
+
+.titleCard {
+    font-size: 1.2em;
+    font-weight: 400;
+}
+
+.rankingFilmes {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #F2F7F2;
+    width: 2rem;
+    height: 3rem;
+    z-index: 100;
+    left: 78%;
+    margin-top: .3rem;
+    animation: flag 3s ease-in-out infinite;
+}
+
+.buttonCard{
+    background-color: white;
+}
+
+.buttonCard:hover{
+    background-color: rgb(150, 147, 147);
+}
+
+@keyframes flag {
+    0%, 100% {
+        border-left: 20px solid #c51e23;
+        border-right: 20px solid #c51e23;
+        border-bottom: 15px solid transparent;
+        filter: drop-shadow(1px 5px 3px #111);
+    }
+    50% {
+        border-left: 20px solid #c51e23;
+        border-right: 20px solid #c51e23;
+        border-bottom: 12px solid transparent;
+        filter: drop-shadow(2px 1px 1px #111);
+    }
+}

@@ -28,6 +28,7 @@ export default function Filmes() {
               preco={item.preco}
               />
           )
+          
         }
       </div>
     </div>
