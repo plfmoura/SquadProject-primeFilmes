@@ -47,6 +47,14 @@
     animation: flag 3s ease-in-out infinite;
 }
 
+.buttonCard{
+    background-color: white;
+}
+
+.buttonCard:hover{
+    background-color: rgb(150, 147, 147);
+}
+
 @keyframes flag {
     0%, 100% {
         border-left: 20px solid #c51e23;

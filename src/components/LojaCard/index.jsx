@@ -32,6 +32,6 @@ export default function lojaCard({ title, image, preco }) {
         R$ {preco} {/* Aqui é o preco */}
         </Typography>
     </CardContent> 
-    <button>Adicionar ao Carrinho</button>
+    <button className={style.buttonCard}>Adicionar ao Carrinho</button>
 </Card>
     )}
