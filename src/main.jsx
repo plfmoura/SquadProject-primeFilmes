@@ -7,6 +7,7 @@ import Filmes from './routes/Filmes/Filmes'
 import Loja from './routes/Loja/Loja'
 import ErrorPage from './routes/ErrorPage/ErrorPage'
 import Home from './routes/Home/Home'
+import Equipe from './routes/Equipe/Equipe'
 
 const router = createBrowserRouter([
   {
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
       {
         path: '/loja',
         element: <Loja />,
+      },
+      {
+      path: '/equipe',
+      element: <Equipe/>,
       },
     ]
   },
