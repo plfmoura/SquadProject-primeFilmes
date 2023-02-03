@@ -4,6 +4,7 @@ import React from 'react'
 import { NavLink } from 'react-router-dom';
 import LoginModal from './LoginModal';
 import style from './navBar.module.css'
+import CartModal from './LoginModal'
 
 const filmes = [
   "Ação",
@@ -35,6 +36,7 @@ export default function NavBar() {
           <li><NavLink className={style.menuItem} to="/filmes" end>Filmes</NavLink></li>          
           <li><NavLink className={style.menuItem} to="/loja" end>Loja</NavLink></li>      
           <li><NavLink className={style.menuItem} to="/equipe" end>Equipe</NavLink></li>     
+          <li><NavLink className={style.menuItem} to="/cart" end>Cart</NavLink></li>
           <li className={style.menuItem}><LoginModal /></li>
         </ul>
       </div>

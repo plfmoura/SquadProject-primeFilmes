@@ -5,7 +5,7 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import style from './lojaCard.module.css'
 
-export default function lojaCard({ title, image, preco }) {
+export default function lojaCard({ title, image, preco, onPress }) {
     return (
 <Card  
     sx={{ 
@@ -32,6 +32,7 @@ export default function lojaCard({ title, image, preco }) {
         R$ {preco} {/* Aqui é o preco */}
         </Typography>
     </CardContent> 
-    <button className={style.buttonCard}>Adicionar ao Carrinho</button>
+    <button onClick={ onPress }>Adicionar ao Carrinho</button>
+
 </Card>
     )}
