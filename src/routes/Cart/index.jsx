@@ -2,10 +2,12 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import style from './cart.module.css'
 import FilmesCard from '../../components/LojaCard'
-
+import Modal from '../../components/ModalCart';
 const Cart = () => {
   const [products, setProducts] = useState([]);
   const [cart, setCart] = useState([]);
+  const [openModal2, setOpenModal2] = useState(false)
+  const [openModal, setOpenModal] = useState(false)
 
   useEffect(() => {
     axios.get('https://json-server-md3.onrender.com/alimentos')
@@ -18,37 +20,44 @@ const Cart = () => {
   };
 
   return (
-    <div className={style.cartEx}>
-      <h2>Carrinho</h2>
-      <ul>
-        {cart.map(item => (
-          <li key={item.id}>
-            {item.nome} - ${item.preco}
-          </li>
-        ))}
-      </ul>
+    <div className={style.lojaContainer}>
+      <button onClick={() => setOpenModal(true)}>Abrir Modal</button>
+      <Modal isOpen={openModal} setModalOpen={() => setOpenModal(!openModal)}>
+        <ul>
+          <h1>Carrinho</h1>
+          {cart.map(item => (
+            <li key={item.id}>
+              {item.nome} - ${item.preco}
+            </li>
+          ))}
+          <button onClick={() => setOpenModal2(true)}>Finalizar compra</button>
+        </ul>
+      </Modal>
+      <Modal
+        isOpen={openModal2}
+        setModalOpen={() => setOpenModal2(!openModal2)}>
+        Obrigado pela compra!
+      </Modal>
+
       <div className={style.lojaContainer}>
-      <h1 className={style.titulo}>Catálogo de Produtos</h1>
-      <div className={style.lojaContent}>
-        {
-          products.map(( product ) => 
-          <>
-            <FilmesCard 
-              image={product.img} 
-              title={product.nome}
-              preco={product.preco}
-              onPress={() => addToCart(product)}
-              />
+        <h1 className={style.titulo}>Catálogo de Produtos</h1>
+        <div className={style.lojaContent}>
+          {
+            products.map((product) =>
+              <>
+                <FilmesCard
+                  image={product.img}
+                  title={product.nome}
+                  preco={product.preco}
+                  onPress={() => addToCart(product)}
+                />
+              </>
+            )
 
+          }
 
-              
-            </>  
-          )
-          
-        }
-        
+        </div>
       </div>
-    </div>
     </div>
   );
 };
