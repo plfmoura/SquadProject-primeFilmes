@@ -3,6 +3,13 @@
     justify-content: right;
 }
 
+.cardContainer .cardContent:hover {
+    transform: scale(1.02);
+    cursor: pointer;
+    transition: all 250ms ease;
+    box-shadow: 0 0 .8rem .5rem rgba(255, 255, 255, 0.089);
+}
+
 .cardContent {
     z-index: 1;
     width: 220px;
@@ -18,12 +25,6 @@
     height: 80%;
     max-height: 80%;
     object-fit: cover;
-}
-
-.cardContainer:hover {
-    transform: scale(1.02);
-    cursor: pointer;
-    transition: all 250ms linear;
 }
 
 .titleCard {
