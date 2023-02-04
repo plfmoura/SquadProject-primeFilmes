@@ -36,8 +36,9 @@ export default function Home() {
       </div>
       <article className={style.popularContainer}>
         <div className={style.popularArea}>
-          <section>
-            <HomeCardPrincipal video={"https://www.youtube.com/embed/o8VZAXuMUIg"} title={"YouTube Video Player"} />
+          <section className={style.alignItems}>
+
+            <HomeCardPrincipal classe={style.video} video={"https://www.youtube.com/embed/o8VZAXuMUIg"} title={"YouTube Video Player"} />
               <div className={style.sobreFilme}>
                 <p>O casal Jeniffer Aniston e Adam Saddler precisam desvendar o desaparecimento de Maharaja, 
                 interpretado por Adeel Akhtar, 
@@ -50,8 +51,8 @@ export default function Home() {
                 </div>
               </div>
           </section>
-          <section>
-            <HomeCardPrincipal video={"https://www.youtube.com/embed/iRa1o0OGQUc"} title={"YouTube Video Player"} />
+          <section className={style.alignItems}>
+            <HomeCardPrincipal classe={style.video} video={"https://www.youtube.com/embed/iRa1o0OGQUc"} title={"YouTube Video Player"} />
             <div className={style.sobreFilme}>
               <p>Em sua 4ª continução épica, Transformers: O Despertar das Feras traz mais uma aventura épica pelo universo dos 
                 transformers. Ambientada nos anos 1990, o filme apresentará os Maximals, Predacons e Terrorcons à batalha existente 

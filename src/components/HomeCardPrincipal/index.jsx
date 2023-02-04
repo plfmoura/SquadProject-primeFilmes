@@ -1,7 +1,7 @@
 import React from 'react'
 import style from './homeCardPrincipal.module.css'
 
-export default function HomeCardPrincipal({ video, title }) {
+export default function HomeCardPrincipal({ video, title, classe }) {
 
   const handleClick = () => {
     console.log('clique')
@@ -16,7 +16,7 @@ export default function HomeCardPrincipal({ video, title }) {
         allowFullScreen={false}
         onMouseOver={ handleClick }
         onMouseOut={ handleClick }
-
+        className={ classe }
         ></iframe>
     </div>
   )

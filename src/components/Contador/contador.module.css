@@ -7,10 +7,20 @@
     color: #fff;
 }
 
+.counterContainer div {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
 .counterContainer label {
     font-size: 2.5rem;
     font-weight: 600;
     margin-top: .4rem;
+}
+
+.counterContainer div:nth-child(1) label {
+    margin-left: 1rem;
 }
 
 .counter {
@@ -26,7 +36,6 @@
     display: flex;
     letter-spacing: .1rem;
     align-items: center;
-    min-width: 2rem;
     min-height: 2rem;
     font-family: Arial, Helvetica, sans-serif;
     transform: scale(2);

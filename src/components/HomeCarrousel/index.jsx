@@ -31,7 +31,7 @@ function HomeCarrousel() {
   ]
 
   return (
-    <Carousel>
+    <Carousel style={{marginTop: "8%"}}>
       {
         dataCarousel.map(( item, key ) => 
           <Carousel.Item interval={8000} key={key}>
