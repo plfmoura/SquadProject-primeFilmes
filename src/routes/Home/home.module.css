@@ -96,3 +96,19 @@
     margin: 0 auto;
     background: linear-gradient(90deg, #cecdcd00, #f1f1f121, #f1f1f152, #f1f1f121, #cecdcd00 );
 }
+
+@media screen and (min-width: 1440px ) {
+    .popularContainer {
+        max-width: 80%;
+        width: 72rem;
+        padding: 0rem 5rem;
+    }
+
+    .filmesContent {
+        width: 70%;
+        height: 38vh;
+    }
+    .alingTitle {
+        margin: 1rem 0 0 15%;
+    }
+}
