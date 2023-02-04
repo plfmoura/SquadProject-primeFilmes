@@ -28,5 +28,6 @@
     align-content: stretch;
     flex-wrap: wrap;
     margin: 0 auto;
+    padding-bottom: 3rem;
 }
 
