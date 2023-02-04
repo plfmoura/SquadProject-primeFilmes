@@ -1,5 +1,5 @@
 import React from 'react'
-
+import style from './cart.module.css'
 
 const BACKGROUND_STYLE = {
   position: 'fixed',
@@ -24,13 +24,16 @@ const MODAL_STYLE = {
 
 
 
-export default function Modal({ isOpen, setModalOpen, children }) {
+export default function Modal({ isOpen, children }) {
   if (isOpen) {
     return (
       <div style={BACKGROUND_STYLE}>
         <div style={MODAL_STYLE}>
+        <h1>Carrinho</h1>
+          <hr></hr>
           <div>{children}</div>
-          <button onClick={setModalOpen}>Fechar</button>
+          <div className={style.btns}>
+          </div>
         </div>
       </div>
     )

@@ -1,0 +1,12 @@
+.btnModal{
+    background-color: red;
+    height: 2rem;
+}
+.btns{
+    display: flex;
+    justify-content: space-between;
+}
+
+ul{
+    list-style: none;
+}

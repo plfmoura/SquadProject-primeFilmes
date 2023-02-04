@@ -19,24 +19,43 @@ const Cart = () => {
     setCart([...cart, product]);
   };
 
+const modalClose = function(){
+  setOpenModal(false)
+  setOpenModal2(false)
+}
+
+//   function modalClose(){
+//     this.setOpenModal(false)
+//     this.setOpenModal2(false)
+// }
+
   return (
     <div className={style.lojaContainer}>
       <button onClick={() => setOpenModal(true)}>Abrir Modal</button>
       <Modal isOpen={openModal} setModalOpen={() => setOpenModal(!openModal)}>
+      
         <ul>
-          <h1>Carrinho</h1>
+         
           {cart.map(item => (
             <li key={item.id}>
               {item.nome} - ${item.preco}
+              
             </li>
+            
           ))}
-          <button onClick={() => setOpenModal2(true)}>Finalizar compra</button>
+            <button onClick={() => setOpenModal2(true)}>Finalizar compra</button>
+            <button onClick={() => setOpenModal(false)}>Fechar</button>
+          
         </ul>
       </Modal>
+      
       <Modal
         isOpen={openModal2}
         setModalOpen={() => setOpenModal2(!openModal2)}>
         Obrigado pela compra!
+        <br></br>
+        <button onClick={modalClose}>Fechar</button>
+
       </Modal>
 
       <div className={style.lojaContainer}>
