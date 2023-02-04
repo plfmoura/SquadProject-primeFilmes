@@ -2,15 +2,12 @@
     .home {
         background-color: #e7e5e5;
         width: 100vw;
-        height: 420vh;
     }
     
     .popularContainer {
-        height: 60%;
         display: flex;
         flex-direction: column;
         background-color: red;
-        justify-content: center;
         padding: 1rem 0;
         margin: 0 auto;
         background: linear-gradient(90deg, #cecdcd00, #f1f1f1, #f1f1f1, #cecdcd00 );
@@ -36,6 +33,7 @@
         align-items: center;
         width: 100%;
         margin: 0 auto;
+
     }
     
     .alignItems {
@@ -44,6 +42,10 @@
         flex-direction: column;
         text-align: center;
         justify-content: center;
+    }
+    
+    .alignItems:nth-child(1) {
+        margin-bottom: 3rem;
     }
 
     .video {
@@ -98,7 +100,6 @@
     .home {
         background-color: #e7e5e5;
         width: 100vw;
-        height: 410vh;
     }
    
     .video {
@@ -128,7 +129,6 @@
     .home {
         background-color: #e7e5e5;
         width: 100vw;
-        height: 410vh;
     }
    
     .video {
@@ -149,11 +149,10 @@
     .home {
         background-color: #e7e5e5;
         width: 100vw;
-        height: 410vh;
     }
  
 }
-@media (min-width: 1240px ) {
+@media (min-width: 1281px ) {
     .home {
         background-color: #e7e5e5;
         width: 100vw;
@@ -164,7 +163,6 @@
         flex-direction: column;
         justify-content: center;
         padding: 2rem 0;
-        height: 140vh;
         width: 80%;
         max-width: 100vw;
         margin: 0 auto;
@@ -190,7 +188,6 @@
         justify-content: space-between;
         align-items: center;
         width: 100%;
-        height: 100%;
         margin: 0 auto;
     }
     
@@ -267,7 +264,6 @@
         flex-direction: column;
         justify-content: center;
         padding: 2rem 0;
-        height: 110vh;
         width: 80%;
         max-width: 100vw;
         margin: 0 auto;
@@ -293,7 +289,6 @@
         justify-content: space-between;
         align-items: center;
         width: 100%;
-        height: 100%;
         margin: 0 auto;
     }
     
