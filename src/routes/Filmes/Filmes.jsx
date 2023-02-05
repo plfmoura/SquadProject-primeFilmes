@@ -26,14 +26,13 @@ export default function Filmes() {
       getMovies();
     }
 
-    let pesquisa = name.toLowerCase()
-    for (var i in movies) {
-      if (movies[i].nome.includes(pesquisa)) {
-        moviesResults.push(movies[i]);
-      }
+    let search = name.toLowerCase()
+    for(var i in movies){
+        if(movies[i].nome.toLowerCase().includes(search.toLowerCase())){
+          moviesResults.push(movies[i]);
+        }
       setMovies(moviesResults);
     }
-    console.log(moviesResults)
   }
 
   useEffect(()=>{
