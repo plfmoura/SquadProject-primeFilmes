@@ -67,7 +67,17 @@ export default function NavBar() {
           <li><NavLink className={style.menuItem} to="/loja" end>Loja</NavLink></li>      
           <li><NavLink className={style.menuItem} to="/equipe" end>Equipe</NavLink></li>     
           <li><NavLink className={style.menuItem} to="/cart" end>Cart</NavLink></li>     
-          <li className={style.menuItem}><LoginModal /></li>
+          {
+            singin ? ( <li className={style.menuItem} onClick={ singOut }>Sair</li>)
+             : (<LoginModal 
+              onPress={ singIn } 
+              email={(e) => setEmail(e.target.value)}
+              password={(e) => setPassword(e.target.value)}
+              show={show} onShow={handleShow} 
+              onClose={handleClose}
+              className={style.menuItem}
+              />)
+          }
         </ul>
       </div>
       <div className={style.secondContent}>
