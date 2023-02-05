@@ -35,12 +35,36 @@ export default function Filmes() {
     }
   }
 
+  useEffect(()=>{
+    console.log(total)
+  }, [cart])
+
   useEffect(() => {
     getMovies()
   }, [])
 
   const addToCart = (product) => {
-    setCart([...cart, product]);
+    let newCart = [...cart];
+    let index = newCart.findIndex(p => p.id === product.id);
+    if (index === -1) {
+      newCart.push({...product, quantity: 1});
+    } else {
+      newCart[index].quantity++;
+    }
+    setCart(newCart);
+  };
+
+  const removeFromCart = (product) => {
+    let newCart = [...cart];
+    let index = newCart.findIndex(p => p.id === product.id);
+    if (index !== -1) {
+      if (newCart[index].quantity > 1) {
+        newCart[index].quantity--;
+      } else {
+        newCart.splice(index, 1);
+      }
+    }
+    setCart(newCart);
   };
 
   const modalClose = function () {
@@ -48,34 +72,35 @@ export default function Filmes() {
     setOpenModal2(false)
   }
 
+  const total = cart.reduce((sum, item) => sum + item.preco, 0);  ''
 
   return (
     <>
       <Modal isOpen={openModal} setModalOpen={() => setOpenModal(!openModal)}>
-
-        <ul>
-
-          {cart.map(item => (
-            <li key={item.id}>
-              {item.nome} - ${item.preco}
-
-            </li>
-
-          ))}
+      
+      <ul>
+       
+      {cart.map(item => (
+          <li key={item.id}>
+            {item.nome} - ${item.preco} x {item.quantity}
+            <button onClick={() => removeFromCart(item)}>Remover do Carrinho</button>
+          </li>
+        ))}
+        <li>Total: ${total}</li>
           <button onClick={() => setOpenModal2(true)}>Finalizar compra</button>
           <button onClick={() => setOpenModal(false)}>Fechar</button>
+        
+      </ul>
+    </Modal>
+    
+    <Modal
+      isOpen={openModal2}
+      setModalOpen={() => setOpenModal2(!openModal2)}>
+      Obrigado pela compra!
+      <br></br>
+      <button onClick={modalClose}>Fechar</button>
 
-        </ul>
-      </Modal>
-
-      <Modal
-        isOpen={openModal2}
-        setModalOpen={() => setOpenModal2(!openModal2)}>
-        Obrigado pela compra!
-        <br></br>
-        <button onClick={modalClose}>Fechar</button>
-
-      </Modal>
+    </Modal>
       <div className={style.filmesContainer}>
         <h1 className={style.titulo}>Catálogo de filmes</h1>
       <button onClick={() => setOpenModal(true)}>Abrir Modal</button>
