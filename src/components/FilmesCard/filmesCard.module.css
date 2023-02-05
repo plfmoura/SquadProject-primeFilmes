@@ -47,6 +47,15 @@
     animation: flag 3s ease-in-out infinite;
 }
 
+.btn:hover{
+    background-color: gray;
+}
+
+.btn:active{
+    background-color: red;
+    color: pink;
+}
+
 @keyframes flag {
     0%, 100% {
         border-left: 20px solid #c51e23;
