@@ -7,7 +7,6 @@ import { Button, Form } from 'react-bootstrap'
 export default function Filmes() {
 
   const [movies, setMovies ] = useState([])
-  const [search, setSearch] = useState()
 
   const getMovies = () =>{
     let url = `https://json-server-md3.onrender.com/filmes`
@@ -19,6 +18,7 @@ export default function Filmes() {
     if (name === ''){
         getMovies();
     }
+    console.log(name)
 
     let pesquisa = name.toLowerCase()
     for(var i in movies){
