@@ -16,14 +16,36 @@ const Cart = () => {
   }, []);
 
   const addToCart = (product) => {
-    setCart([...cart, product]);
+    let newCart = [...cart];
+    let index = newCart.findIndex(p => p.id === product.id);
+    if (index === -1) {
+      newCart.push({...product, quantity: 1});
+    } else {
+      newCart[index].quantity++;
+    }
+    setCart(newCart);
   };
 
+  const removeFromCart = (product) => {
+    let newCart = [...cart];
+    let index = newCart.findIndex(p => p.id === product.id);
+    if (index !== -1) {
+      if (newCart[index].quantity > 1) {
+        newCart[index].quantity--;
+      } else {
+        newCart.splice(index, 1);
+      }
+    }
+    setCart(newCart);
+  };
+  
 const modalClose = function(){
   setOpenModal(false)
   setOpenModal2(false)
 }
 
+
+ 
 //   function modalClose(){
 //     this.setOpenModal(false)
 //     this.setOpenModal2(false)
@@ -36,12 +58,11 @@ const modalClose = function(){
       
         <ul>
          
-          {cart.map(item => (
+        {cart.map(item => (
             <li key={item.id}>
-              {item.nome} - ${item.preco}
-              
+              {item.nome} - ${item.preco} x {item.quantity}
+              <button onClick={() => removeFromCart(item)}>Remover do Carrinho</button>
             </li>
-            
           ))}
             <button onClick={() => setOpenModal2(true)}>Finalizar compra</button>
             <button onClick={() => setOpenModal(false)}>Fechar</button>
@@ -68,8 +89,10 @@ const modalClose = function(){
                   image={product.img}
                   title={product.nome}
                   preco={product.preco}
-                  onPress={() => addToCart(product)}
+                  onPress={() => addToCart()}
                 />
+
+              
               </>
             )
 
