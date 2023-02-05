@@ -5,7 +5,7 @@ import Form from "react-bootstrap/Form";
 
 export default function LoginModal({ onPress, onClose, onShow, show, password, email }) {
   return (
-    <>
+    <div>
       <li
         onClick={onShow}
         style={{
@@ -66,6 +66,6 @@ export default function LoginModal({ onPress, onClose, onShow, show, password, e
           </div>
         </Modal.Footer>
       </Modal>
-    </>
+  </div>
   );
 }

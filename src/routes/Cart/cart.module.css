@@ -1,0 +1,25 @@
+.lojaContainer {
+    background-color: white;
+    width: 100%;
+    margin-top: 12%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titulo {
+    color: black;
+    margin-bottom: 5%;
+}
+
+.lojaContent {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: stretch;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+

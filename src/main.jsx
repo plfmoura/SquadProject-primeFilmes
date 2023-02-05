@@ -8,6 +8,8 @@ import Loja from './routes/Loja/Loja'
 import ErrorPage from './routes/ErrorPage/ErrorPage'
 import Home from './routes/Home/Home'
 import Equipe from './routes/Equipe/Equipe'
+import Cart from './routes/Cart'
+
 
 const router = createBrowserRouter([
   {
@@ -30,6 +32,10 @@ const router = createBrowserRouter([
       {
       path: '/equipe',
       element: <Equipe/>,
+      },
+      {
+        path: '/cart',
+        element: <Cart/>
       },
     ]
   },
