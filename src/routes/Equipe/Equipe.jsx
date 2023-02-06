@@ -21,7 +21,7 @@ function Equipe() {
               <h2>
                 <span>Pedro </span>Moura
               </h2>
-              <h5>Facilitador</h5>
+              <h5>Co-Facilitador</h5>
               <div className={styles.RedesSociais}>
                 <a href="https://github.com/plfmoura">
                   <FaGithub className={styles.SocialIcons}/>
@@ -90,7 +90,7 @@ function Equipe() {
               <h2>
                 <span>Fancisco</span> William
               </h2>
-              <h5>Co-Facilitador</h5>
+              <h5>Colaborador</h5>
               <div className={styles.RedesSociais}>
                 <a href="https://github.com/WillianXG">
                   <FaGithub className={styles.SocialIcons}/>

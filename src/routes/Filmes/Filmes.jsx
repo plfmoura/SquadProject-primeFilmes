@@ -5,6 +5,8 @@ import FilmesCard from '../../components/FilmesCard'
 import { Button, Form } from 'react-bootstrap'
 import Loading from '../../components/Loading'
 import Modal from '../../components/ModalCart'
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import CloseIcon from '@mui/icons-material/Close';
 
 export default function Filmes() {
   
@@ -82,18 +84,19 @@ export default function Filmes() {
   return (
     <>
       <Modal isOpen={openModal} setModalOpen={() => setOpenModal(!openModal)}>
-      
       <ul>
        
       {cart.map(item => (
-          <li key={item.id}>
+          <li key={item.id} className={style.itemCarrinho}>
             {item.nome} - ${item.preco} x {item.quantity}
-            <button onClick={() => removeFromCart(item)}>Remover do Carrinho</button>
+            <div className={style.cartIconClose} onClick={() => removeFromCart(item)}> <CloseIcon /> </div>
           </li>
         ))}
-        <li>Total: ${total}</li>
-          <button onClick={() => setOpenModal2(true)}>Finalizar compra</button>
-          <button onClick={() => setOpenModal(false)}>Fechar</button>
+        <li>Total: R${total}</li>
+        <div className={style.btns}>
+         <Button variant="primary"  onClick={() => setOpenModal2(true)}>Finalizar compra</Button>{' '}
+          <Button variant="danger" onClick={() => setOpenModal(false)}>Fechar</Button>{' '}
+          </div>
         
       </ul>
     </Modal>
@@ -102,12 +105,13 @@ export default function Filmes() {
       isOpen={openModal2}
       setModalOpen={() => setOpenModal2(!openModal2)}>
       Obrigado pela compra!
-      <br></br>
-      <button onClick={() => {setOpenModal2(false); setCart([])}}>Fechar</button>
+      <br/>
+      <br/>
+      <center><Button variant="danger" onClick={() => {modalClose(); setCart([])}}>Fechar</Button>{' '}</center>
     </Modal>
       <div className={style.filmesContainer}>
-        <h1 className={style.titulo}>Catálogo de filmes</h1>
-      <button onClick={() => setOpenModal(true)}>Abrir Modal</button>
+      <div className={style.bgFilmes}></div>
+      <div onClick={() => setOpenModal(true)} className={style.cartIcon}> <ShoppingCartIcon /> </div>
 
         <Form className={style.searchInput}>
           <Form.Control

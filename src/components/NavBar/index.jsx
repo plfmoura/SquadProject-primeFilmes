@@ -18,6 +18,14 @@ const filmes = [
   "Musical",
   "Filme policial",
   "Romance",
+  "Terror",
+  "Faroeste",
+  "Fantasia",
+  "Ficção científica",
+  "Mistério",
+  "Musical",
+  "Filme policial",
+  "Romance",
   "Terror"
 ]
   

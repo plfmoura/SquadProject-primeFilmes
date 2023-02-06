@@ -4,6 +4,7 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import style from './filmesCard.module.css'
+import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 
 export default function FilmesCard({ title, image, preco, onPress }) {
     return (
@@ -32,7 +33,8 @@ export default function FilmesCard({ title, image, preco, onPress }) {
         R$ {preco} {/* Aqui é o preco */}
         </Typography>
     </CardContent> 
-    <button className={style.btn} onClick={onPress}>Comprar Ingresso</button>
-    
+    <div className={style.cartIcon}>
+        <AddShoppingCartIcon className={style.btn} onClick={onPress} />
+    </div>
 </Card>
     )}

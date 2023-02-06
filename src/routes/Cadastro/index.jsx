@@ -3,6 +3,7 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import axios from 'axios';
 import style from './cadastro.module.css'
+import { useNavigate } from 'react-router-dom';
 
 export default function Cadastro() {
     
@@ -11,6 +12,7 @@ export default function Cadastro() {
     const [ usuarios, setUsuarios] = useState([])
     const [ resposta, setResposta] = useState(false)
     
+    const navigate = useNavigate()
     const pegarUsuarios = () => {
         const url = `https://json-server-md3.onrender.com/users/`
         axios.get(url)
@@ -49,7 +51,7 @@ export default function Cadastro() {
             window.location.reload(false);
         }
         alert('Usuario cadastrado com sucesso!')
-        refreshPage()
+        navigate('/')
     }
 
   return (
