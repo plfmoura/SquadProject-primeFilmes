@@ -3,10 +3,12 @@ import style from './filmes.module.css'
 import axios from 'axios'
 import FilmesCard from '../../components/FilmesCard'
 import { Button, Form } from 'react-bootstrap'
+import Loading from '../../components/Loading'
 import Modal from '../../components/ModalCart'
 
 export default function Filmes() {
-
+  
+  const [ loading, setLoading ] = useState(false)
   const [movies, setMovies] = useState([])
   const [search, setSearch] = useState()
   const [products, setProducts] = useState([]);
@@ -40,7 +42,9 @@ export default function Filmes() {
   }, [cart])
 
   useEffect(() => {
-    getMovies()
+    setTimeout(() => {getMovies()
+      setLoading(true)
+    }, 3000)
   }, [])
 
   const addToCart = (product) => {
@@ -127,6 +131,8 @@ export default function Filmes() {
             )
 
           }
+            {!loading && <Loading />}
+
         </div>
       </div>
     </>
