@@ -3,7 +3,6 @@ import React, { useState } from 'react'
 import { NavLink, useNavigate } from 'react-router-dom';
 import LoginModal from './LoginModal';
 import style from './navBar.module.css'
-import CartModal from './LoginModal'
 
 const filmes = [
   "Ação",
@@ -20,7 +19,7 @@ const filmes = [
   "Filme policial",
   "Romance",
   "Terror"
-  ]
+]
   
 export default function NavBar() {
   const [ singin , setSingin ] = useState(false)
@@ -54,6 +53,10 @@ export default function NavBar() {
     navigate('/')
   }
 
+  const handleClick = () => {
+    navigate('/filmes')
+  }
+
   return (
     <div className={style.navBarContainer}>
       <div className={style.firstContent}>
@@ -64,7 +67,6 @@ export default function NavBar() {
         <ul className={style.menuNavigation}>
           <li><NavLink className={style.menuItem} to="/" end>Home</NavLink></li>       
           <li><NavLink className={style.menuItem} to="/filmes" end>Filmes</NavLink></li>          
-          {/* <li><NavLink className={style.menuItem} to="/loja" end>Loja</NavLink></li>       */}
           <li><NavLink className={style.menuItem} to="/equipe" end>Equipe</NavLink></li>     
           <li><NavLink className={style.menuItem} to="/cart" end>Loja</NavLink></li>     
           {
@@ -84,7 +86,7 @@ export default function NavBar() {
         <div className={style.filmesAtalho}>
           {
             filmes.map(( item, id ) => 
-              <p key={id}>{item}</p>
+              <p onClick={handleClick} key={id}>{item}</p>
             )
           }
         </div>

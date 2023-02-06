@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import axios from 'axios';
+import style from './cadastro.module.css'
 
 export default function Cadastro() {
     
@@ -15,12 +16,8 @@ export default function Cadastro() {
         axios.get(url)
         .then(( response ) => setUsuarios(response.data))
     }
+    console.log(resposta)
     
-    useEffect(() => {
-        console.log(resposta)
-    }, [resposta])
-    
-
     const verificarUsuarios = () => {
         pegarUsuarios()
         setResposta(false)
@@ -30,42 +27,44 @@ export default function Cadastro() {
                 setResposta(true)
                 console.log(resposta)
             } else {
-                setResposta(false)
-            }
-            if(resposta === true){
-            console.log('Nomes iguais')
-            } else {
-                console.log('Não encontrei nomes iguais')
-                registrarUsuario()
+                console.log(resposta)
             }
         })
+        if(resposta === true){
+            console.log('Nomes iguais')
+        } else {
+            registrarUsuario()
+        }
     }
-    
+
     const registrarUsuario = () => {
+        setResposta(false)
         const url = `https://json-server-md3.onrender.com/users/`
         axios.post(url, {
             email: newUser,
             password: newPassword
         })
-        .then(function (response) {
-            console.log(response);
-        })
-        .catch(function (error) {
-            console.log(error);
-        });
+
+        function refreshPage() {
+            window.location.reload(false);
+        }
+        alert('Usuario cadastrado com sucesso!')
+        refreshPage()
     }
 
   return (
-    <div>
-      <Form style={{marginTop: "10rem"}}>
+    <div className={style.cadastro}>
+      <Form style={{marginTop: "10rem"}} className={style.formContainer}>
             <Form.Group className="mb-3" controlId="formBasicEmail">
-              <Form.Control type="email" onChange={(e) => setNewUser(e.target.value) } placeholder="Digite seu email" />
+              <Form.Control type="email" onChange={(e) => setNewUser(e.target.value) } placeholder="Digite seu melhor email" />
             </Form.Group>
             <Form.Group className="mb-3" controlId="formBasicPassword">
-              <Form.Control type="password" onChange={(e) => setNewPassword(e.target.value) } placeholder="Digite sua senha" />
+              <Form.Control type="password" onChange={(e) => setNewPassword(e.target.value) } placeholder="Digite uma senha" />
             </Form.Group>
             <Form.Text className="text-muted">
-              Nunca compartilhe seus dados cadastrais.
+              {
+                resposta ? (<p>O email já está cadastrado no sistema!</p>) : ('')
+              }
             </Form.Text>
             <Button
             variant="primary"
