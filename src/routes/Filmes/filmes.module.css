@@ -1,13 +1,31 @@
 .filmesContainer {
     background-color: white;
     width: 100%;
-    min-width: 100vw;
-    min-height: 160vh;
-    margin-top: 12%;
+    min-width: 90vw;
+    min-height: 300vh;
+    margin-top: 10rem;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.cartIconClose {
+    margin-left: 1rem;
+    color: #ff0000;
+    cursor: pointer;
+}
+
+.itemCarrinho {
+    display: flex;
+}
+
+.bgFilmes {
+    margin-top: -5rem;
+    width: 100vw;
+    height: 70vh;
+    background: url("https://cinearaujo.com.br/images/sp_maua_multiplex/1.png") no-repeat;
+    background-size: 100%;
 }
 
 .searchInput {
@@ -22,7 +40,7 @@
 }
 
 .filmesContent {
-    width: 100%;
+    width: 80%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -32,3 +50,17 @@
     padding-bottom: 3rem;
 }
 
+.cartIcon {
+    position: relative;
+    left: 42vw;
+    background-color: red;
+    color: #fff;
+    margin-top: 1rem;
+    padding: .5rem 1rem;
+    border-radius: 5px;
+}
+
+.cartIcon:hover {
+    cursor: pointer;
+    background-color: #c1c1c1;
+}

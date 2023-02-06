@@ -1,3 +1,4 @@
+import { Button, Form } from 'react-bootstrap'
 import React from 'react'
 import style from './cart.module.css'
 
@@ -16,26 +17,35 @@ const MODAL_STYLE = {
   top: '50%',
   left: '50%',
   transform: 'translate(-50%,-50%)',
-  padding: '150px',
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'space-beetwen',
   backgroundColor: '#fff',
   borderRadius: '10px',
   color: 'black'
 }
 
-
+const ALIGN_CONTENT = {
+  width: "35vw",
+  height: "40vh",
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: "center",
+  justifyContent: 'space-beetwen',
+}
 
 export default function Modal({ isOpen, children }) {
+  
   if (isOpen) {
     return (
       <div style={BACKGROUND_STYLE}>
         <div style={MODAL_STYLE}>
+          <div style={ALIGN_CONTENT}>
           <div className={style.titleDiv}>
-        <h1 className={style.titleModal}>Carrinho</h1>
-
+            <h1 className={style.titleModal}>Carrinho</h1>
           </div>
           <hr></hr>
-          <div>{children}</div>
-          <div className={style.btns}>
+          <div>{children}</div> 
           </div>
         </div>
       </div>

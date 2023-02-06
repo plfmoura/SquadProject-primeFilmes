@@ -9,6 +9,7 @@
 /* CLASS Container*/
 .container{
     display: flex;
+    width: 100vw;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
