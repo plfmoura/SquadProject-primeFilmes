@@ -12,8 +12,6 @@ export default function Filmes() {
   
   const [ loading, setLoading ] = useState(false)
   const [movies, setMovies] = useState([])
-  const [search, setSearch] = useState()
-  const [products, setProducts] = useState([]);
   const [cart, setCart] = useState([]);
   const [openModal2, setOpenModal2] = useState(false)
   const [openModal, setOpenModal] = useState(false)
@@ -92,7 +90,7 @@ export default function Filmes() {
             <div className={style.cartIconClose} onClick={() => removeFromCart(item)}> <CloseIcon /> </div>
           </li>
         ))}
-        <li>Total: R${total}</li>
+        <li className={style.totalCart}>Total: R${total}</li>
         <div className={style.btns}>
          <Button variant="primary"  onClick={() => setOpenModal2(true)}>Finalizar compra</Button>{' '}
           <Button variant="danger" onClick={() => setOpenModal(false)}>Fechar</Button>{' '}
@@ -104,7 +102,7 @@ export default function Filmes() {
     <Modal
       isOpen={openModal2}
       setModalOpen={() => setOpenModal2(!openModal2)}>
-      Obrigado pela compra!
+      <h3 className={style.finalCart}>Obrigado pela compra!</h3>
       <br/>
       <br/>
       <center><Button variant="danger" onClick={() => {modalClose(); setCart([])}}>Fechar</Button>{' '}</center>
@@ -120,15 +118,14 @@ export default function Filmes() {
             aria-label="Search"
             onChange={(e) => moviesFilter(e.target.value)}
           />
-          <Button variant="outline-success">Search</Button>
+          <Button variant="light">Search</Button>
         </Form>
         <div className={style.filmesContent}>
           {
             movies.map((item, key) =>
               <FilmesCard
                 image={item.img[0]}
-                title={item.nome}
-                preco={item.preco}
+                preco={item.preco.toFixed(2)}
                 key={key}
                 onPress={()=> addToCart(item)}
               />
