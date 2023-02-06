@@ -90,7 +90,7 @@ export default function Filmes() {
             <div className={style.cartIconClose} onClick={() => removeFromCart(item)}> <CloseIcon /> </div>
           </li>
         ))}
-        <li>Total: R${total}</li>
+        <li className={style.totalCart}>Total: R${total}</li>
         <div className={style.btns}>
          <Button variant="primary"  onClick={() => setOpenModal2(true)}>Finalizar compra</Button>{' '}
           <Button variant="danger" onClick={() => setOpenModal(false)}>Fechar</Button>{' '}
@@ -102,7 +102,7 @@ export default function Filmes() {
     <Modal
       isOpen={openModal2}
       setModalOpen={() => setOpenModal2(!openModal2)}>
-      Obrigado pela compra!
+      <h3 className={style.finalCart}>Obrigado pela compra!</h3>
       <br/>
       <br/>
       <center><Button variant="danger" onClick={() => {modalClose(); setCart([])}}>Fechar</Button>{' '}</center>

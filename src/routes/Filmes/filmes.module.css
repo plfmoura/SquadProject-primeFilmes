@@ -64,3 +64,11 @@
     cursor: pointer;
     background-color: #c1c1c1;
 }
+
+.totalCart{
+    font-weight: bold;
+}
+
+.finalCard{
+    font-weight: bold;
+}
