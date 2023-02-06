@@ -29,7 +29,10 @@ export default function Modal({ isOpen, children }) {
     return (
       <div style={BACKGROUND_STYLE}>
         <div style={MODAL_STYLE}>
-        <h1>Carrinho</h1>
+          <div className={style.titleDiv}>
+        <h1 className={style.titleModal}>Carrinho</h1>
+
+          </div>
           <hr></hr>
           <div>{children}</div>
           <div className={style.btns}>

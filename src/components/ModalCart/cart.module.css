@@ -10,3 +10,8 @@
 ul{
     list-style: none;
 }
+
+.titleModal{
+    display: flex;
+    justify-content: start;
+}

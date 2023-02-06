@@ -70,6 +70,7 @@ export default function Filmes() {
   const modalClose = function () {
     setOpenModal(false)
     setOpenModal2(false)
+    total === 0
   }
 
   const total = cart.reduce((sum, item) => sum + item.preco, 0);  ''
@@ -98,8 +99,7 @@ export default function Filmes() {
       setModalOpen={() => setOpenModal2(!openModal2)}>
       Obrigado pela compra!
       <br></br>
-      <button onClick={modalClose}>Fechar</button>
-
+      <button onClick={() => {setOpenModal2(false); setCart([])}}>Fechar</button>
     </Modal>
       <div className={style.filmesContainer}>
         <h1 className={style.titulo}>Catálogo de filmes</h1>
