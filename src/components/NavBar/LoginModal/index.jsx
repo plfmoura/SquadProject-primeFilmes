@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import Form from "react-bootstrap/Form";
+import { NavLink } from "react-router-dom";
 
 export default function LoginModal({ onPress, onClose, onShow, show, password, email }) {
   return (
@@ -54,9 +55,13 @@ export default function LoginModal({ onPress, onClose, onShow, show, password, e
             }}
           >
             <p>
-              <a href="#" style={{ color: "#333" }}>
-                Registre-se
-              </a>
+              <NavLink 
+                onClick={ onClose }
+                to="/cadastro" 
+                end
+                >
+                  Registre-se
+                </NavLink>
             </p>
             <p>
               <a href="#" style={{ color: "#333" }}>

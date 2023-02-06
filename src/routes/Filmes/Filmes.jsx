@@ -14,7 +14,6 @@ export default function Filmes() {
   const [openModal2, setOpenModal2] = useState(false)
   const [openModal, setOpenModal] = useState(false)
 
-
   const getMovies = () => {
     let url = `https://json-server-md3.onrender.com/filmes`
     axios.get(url).then((response) => setMovies(response.data))
@@ -25,6 +24,7 @@ export default function Filmes() {
     if (name === '') {
       getMovies();
     }
+    console.log(name)
 
     let search = name.toLowerCase()
     for(var i in movies){
@@ -100,7 +100,6 @@ export default function Filmes() {
       Obrigado pela compra!
       <br></br>
       <button onClick={() => {setOpenModal2(false); setCart([])}}>Fechar</button>
-
     </Modal>
       <div className={style.filmesContainer}>
         <h1 className={style.titulo}>Catálogo de filmes</h1>

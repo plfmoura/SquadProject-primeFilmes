@@ -1,9 +1,9 @@
-# projeto-modulo-III
+# PRIME VIDEOS
+## Projeto módulo III - Programadores Cariocas.
 
-Data limite 01/02/2023
+um Site de Venda de ingressos e informações sobre lançamentos de filmes, conectando o cliente ao seu cinema favorito.
+- Links Úteis;
 
-Repositório da API : <a href="https://github.com/WillianXG/json-server_mld3">clique aqui</a>
+Repositório da API utilizada : <a href="https://github.com/WillianXG/json-server_mld3">clique aqui</a>
 
-API utilizada: <a href="https://json-server-md3.onrender.com/">clique aqui</a>
-
-Vercel Deployment: <a href="https://projeto-modulo-kl6ja2xwn-plfmoura.vercel.app/">clique aqui</a>
+Servidor Render (API utilizada): <a href="https://json-server-md3.onrender.com/">clique aqui</a>
