@@ -66,9 +66,8 @@ export default function NavBar() {
         </div>
         <ul className={style.menuNavigation}>
           <li><NavLink className={style.menuItem} to="/" end>Home</NavLink></li>       
-          <li><NavLink className={style.menuItem} to="/filmes" end>Filmes</NavLink></li>          
+          <li><NavLink className={style.menuItem} to="/filmes" end>Filmes</NavLink></li>         
           <li><NavLink className={style.menuItem} to="/equipe" end>Equipe</NavLink></li>     
-          <li><NavLink className={style.menuItem} to="/cart" end>Loja</NavLink></li>     
           {
             singin ? ( <li className={style.menuItem} onClick={ singOut }>Sair</li>)
              : (<LoginModal 

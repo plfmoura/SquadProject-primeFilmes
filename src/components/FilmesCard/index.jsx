@@ -5,7 +5,7 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import style from './filmesCard.module.css'
 
-export default function FilmesCard({ title, image, preco }) {
+export default function FilmesCard({ title, image, preco, onPress }) {
     return (
 <Card  
     sx={{ 
@@ -32,5 +32,7 @@ export default function FilmesCard({ title, image, preco }) {
         R$ {preco} {/* Aqui é o preco */}
         </Typography>
     </CardContent> 
+    <button className={style.btn} onClick={onPress}>Comprar Ingresso</button>
+    
 </Card>
     )}
