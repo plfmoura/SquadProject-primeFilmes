@@ -3,10 +3,12 @@ import style from './filmes.module.css'
 import axios from 'axios'
 import FilmesCard from '../../components/FilmesCard'
 import { Button, Form } from 'react-bootstrap'
+import Loading from '../../components/Loading'
 
 export default function Filmes() {
 
   const [movies, setMovies ] = useState([])
+  const [ loading, setLoading ] = useState(false)
 
   const getMovies = () =>{
     let url = `https://json-server-md3.onrender.com/filmes`
@@ -31,7 +33,9 @@ export default function Filmes() {
 }
 
   useEffect(() => {
-    getMovies()
+    setTimeout(() => {getMovies()
+      setLoading(true)
+    }, 3000)
   }, [])
 
   return (
@@ -59,6 +63,8 @@ export default function Filmes() {
             )
             
           }
+            {!loading && <Loading />}
+
         </div>
       </div>
     </>

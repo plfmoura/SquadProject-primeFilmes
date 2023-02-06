@@ -9,7 +9,6 @@ import style from './home.module.css'
 export default function Home() {
 
   const [ movies, setMovies ] = useState([])
-  // const [ top, setTop ] = useState([])
 
   const getMovies = () => {
     var endPoints = []
@@ -37,7 +36,6 @@ export default function Home() {
       <article className={style.popularContainer}>
         <div className={style.popularArea}>
           <section className={style.alignItems}>
-
             <HomeCardPrincipal classe={style.video} video={"https://www.youtube.com/embed/o8VZAXuMUIg"} title={"YouTube Video Player"} />
               <div className={style.sobreFilme}>
                 <p>O casal Jeniffer Aniston e Adam Saddler precisam desvendar o desaparecimento de Maharaja, 
