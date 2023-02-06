@@ -12,8 +12,6 @@ export default function Filmes() {
   
   const [ loading, setLoading ] = useState(false)
   const [movies, setMovies] = useState([])
-  const [search, setSearch] = useState()
-  const [products, setProducts] = useState([]);
   const [cart, setCart] = useState([]);
   const [openModal2, setOpenModal2] = useState(false)
   const [openModal, setOpenModal] = useState(false)
@@ -120,15 +118,14 @@ export default function Filmes() {
             aria-label="Search"
             onChange={(e) => moviesFilter(e.target.value)}
           />
-          <Button variant="outline-success">Search</Button>
+          <Button variant="light">Search</Button>
         </Form>
         <div className={style.filmesContent}>
           {
             movies.map((item, key) =>
               <FilmesCard
                 image={item.img[0]}
-                title={item.nome}
-                preco={item.preco}
+                preco={item.preco.toFixed(2)}
                 key={key}
                 onPress={()=> addToCart(item)}
               />

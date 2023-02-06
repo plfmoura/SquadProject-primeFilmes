@@ -11,7 +11,7 @@ export default function FilmesCard({ title, image, preco, onPress }) {
 <Card  
     sx={{ 
         width: 220, 
-        height: 300, 
+        height: 400, 
         display: "flex", 
         flexDirection: "column", 
         justifyContent: "space-between",
@@ -19,17 +19,16 @@ export default function FilmesCard({ title, image, preco, onPress }) {
         font: 'strong'
         
     }}
-    className={style.homeCard}>
-    <CardMedia //Isso é a imagem
-        sx={{ height: 180 }}
+    className={style.cardContainer}>
+    <CardMedia className={style.cardImg} //Isso é a imagem
         image={image}
     />
-    <CardContent>
+    <CardContent className={style.cardContent}>
         <Typography gutterBottom variant="h6" component="div" className={style.titleCard}>
             {title} {/* Nome do filme */}
         </Typography>
     
-        <Typography variant="body" color="black">
+        <Typography variant="body" color="black" className={style.precoFilme}>
         R$ {preco} {/* Aqui é o preco */}
         </Typography>
     </CardContent> 
