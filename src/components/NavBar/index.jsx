@@ -48,6 +48,7 @@ export default function NavBar() {
     if( user.name === email && user.password === password){
         setSingin(true)
         handleClose()
+        navigate('/private')
     } else if(email === '' || password === ''){
       alert('Preencha os campos vazios.')
     } else {
@@ -77,7 +78,7 @@ export default function NavBar() {
           <li><NavLink className={style.menuItem} to="/filmes" end>Filmes</NavLink></li>         
           <li><NavLink className={style.menuItem} to="/equipe" end>Equipe</NavLink></li>     
           {
-            singin ? ( <li className={style.menuItem} onClick={ singOut }>Sair</li>)
+            singin ? ( <li className={style.menuItem} onClick={ singOut }>Sair</li> )
              : (<LoginModal 
               onPress={ singIn } 
               email={(e) => setEmail(e.target.value)}

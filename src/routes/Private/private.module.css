@@ -1,0 +1,19 @@
+.privateContainer {
+    margin-top: 10rem;
+    width: 100vw;
+    min-height: 350vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.privateContent {
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.tableContent {
+    grid-area: 1/3;
+}

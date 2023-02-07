@@ -1,0 +1,13 @@
+.formContainer {
+    min-width: 400px;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    background-color: #c1c1c1;
+    padding: 1rem;
+}
+
+.textArea {
+    resize: none;
+    height: 150px;
+}

@@ -10,6 +10,7 @@ import Home from './routes/Home/Home'
 import Equipe from './routes/Equipe/Equipe'
 import Cart from './routes/Cart'
 import Cadastro from './routes/Cadastro'
+import Private from './routes/Private'
 
 
 const router = createBrowserRouter([
@@ -41,6 +42,10 @@ const router = createBrowserRouter([
       {
         path: '/cart',
         element: <Cart/>
+      },
+      {
+        path: '/private',
+        element: <Private/>
       },
     ]
   },

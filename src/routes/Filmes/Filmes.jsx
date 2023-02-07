@@ -10,7 +10,7 @@ import CloseIcon from '@mui/icons-material/Close';
 
 export default function Filmes() {
   
-  const [ loading, setLoading ] = useState(false)
+  const [loading, setLoading] = useState(false)
   const [movies, setMovies] = useState([])
   const [cart, setCart] = useState([]);
   const [openModal2, setOpenModal2] = useState(false)
@@ -95,7 +95,6 @@ export default function Filmes() {
          <Button variant="primary"  onClick={() => setOpenModal2(true)}>Finalizar compra</Button>{' '}
           <Button variant="danger" onClick={() => setOpenModal(false)}>Fechar</Button>{' '}
           </div>
-        
       </ul>
     </Modal>
     
@@ -133,7 +132,6 @@ export default function Filmes() {
 
           }
             {!loading && <Loading />}
-
         </div>
       </div>
     </>
