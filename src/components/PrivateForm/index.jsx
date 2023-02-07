@@ -4,6 +4,7 @@ import style from './privateForm.module.css'
 
 function PrivateForm({ nome, preco, img, desc, submit }) {
   return (
+    <div className={style.formSticky}>
     <Form className={style.formContainer}>
       <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Control type="text" placeholder="Insira o Nome" onChange={ nome }/>
@@ -26,6 +27,8 @@ function PrivateForm({ nome, preco, img, desc, submit }) {
         Enviar
       </Button>
     </Form>
+    </div>
+
   );
 }
 

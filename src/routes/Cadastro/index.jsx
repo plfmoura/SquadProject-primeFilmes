@@ -56,26 +56,42 @@ export default function Cadastro() {
 
   return (
     <div className={style.cadastro}>
+      <div className={style.alignText}>
+        <h3>Boas vindas a <span>Prime Videos!</span></h3>
+        <p>Cadastre-se e concorra a premiações diárias, é rapidinho, venha fazer parte do nosso clube de benefícios!</p>
+        <p>Compre ingressos e utilize em qualquer Cinema cadastrado em nosso site, com conforto e comodidade de qualquer lugar. </p>
+      </div>
       <Form style={{marginTop: "10rem"}} className={style.formContainer}>
-            <Form.Group className="mb-3" controlId="formBasicEmail">
-              <Form.Control type="email" onChange={(e) => setNewUser(e.target.value) } placeholder="Digite seu melhor email" />
-            </Form.Group>
-            <Form.Group className="mb-3" controlId="formBasicPassword">
-              <Form.Control type="password" onChange={(e) => setNewPassword(e.target.value) } placeholder="Digite uma senha" />
-            </Form.Group>
-            <Form.Text className="text-muted">
-              {
-                resposta ? (<p>O email já está cadastrado no sistema!</p>) : ('')
-              }
-            </Form.Text>
-            <Button
-            variant="primary"
-            onClick={verificarUsuarios}
-            style={{ backgroundColor: "#333", borderColor: "#333" }}
-          >
-            Cadastrar
-          </Button>
-          </Form>
+        <Form.Text className="text-muted">
+        </Form.Text>
+        <Form.Group className="mb-3" controlId="formBasicEmail">
+          <Form.Control type="text" placeholder="Digite seu nome" />
+        </Form.Group>
+        <Form.Group className="mb-3" controlId="formBasicEmail">
+          <Form.Control type="email" onChange={(e) => setNewUser(e.target.value) } placeholder="Digite seu email" />
+        </Form.Group>
+        <Form.Group className="mb-3" controlId="formBasicEmail">
+          <Form.Control type="email" placeholder="Confirme seu email" />
+        </Form.Group>
+        <Form.Group className="mb-3" controlId="formBasicPassword">
+          <Form.Control type="password" onChange={(e) => setNewPassword(e.target.value) } placeholder="Digite uma senha" />
+        </Form.Group>
+        <Form.Group className="mb-3" controlId="formBasicPassword">
+          <Form.Control type="password" onChange={(e) => setNewPassword(e.target.value) } placeholder="Confirme sua senha" />
+        </Form.Group>
+        <Form.Text className="text-muted">
+          {
+            resposta ? (<p>O email já está cadastrado no sistema!</p>) : ('')
+          }
+        </Form.Text>
+        <Button
+          variant="primary"
+          onClick={verificarUsuarios}
+          style={{ backgroundColor: "#333", borderColor: "#333" }}
+        >
+          Cadastrar
+        </Button>
+      </Form>
     </div>
   )
 }

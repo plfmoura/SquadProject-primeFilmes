@@ -1,13 +1,21 @@
+.formSticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 23%;
+    width: 28rem;
+    height: 32rem;
+}
+
 .formContainer {
-    min-width: 400px;
     display: flex;
     flex-direction: column;
-    position: fixed;
-    background-color: #c1c1c1;
+    width: 100%;
+    flex-direction: column;
+    background-color: #444;
     padding: 1rem;
 }
 
 .textArea {
     resize: none;
-    height: 150px;
+    height: 120px;
 }

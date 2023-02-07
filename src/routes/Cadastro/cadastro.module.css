@@ -1,16 +1,37 @@
 .cadastro {
-    margin-top: 5rem;
-    padding-bottom: 10rem;
     width: 100vw;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    padding: 3rem;
+    place-items: center;
+    display: grid;
+    background: url('/public/imagens/cadastroBg.png') top no-repeat;
+    background-size: cover;
 }
 
 .formContainer {
+    grid-column: 2/2;
+    width: 30vw;
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
+    background: #ffffff85;
+    padding: 2rem;
+}
+
+.alignText {
+    grid-column: 1/1;
+    place-items: center;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    background: #ffffff85;
+}
+
+.alignText h3 {
+    font-size: 3rem;
+    white-space: nowrap;
+}
+
+.alignText h3 span {
+    font-weight: bold;
+    font-size: 4rem;
+    white-space: nowrap;
 }

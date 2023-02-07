@@ -11,13 +11,15 @@ export default function Private() {
         getMovies()
     }, [])
 
-    
     const navigate = useNavigate()
     const [ movies, setMovies ] = useState([])
     const [ id, setId ] = useState('')
     const [ nome, setNome ] = useState('')
-    const [ preco, setPreco ] = useState('')
+    const [ desc, setDesc ] = useState('')
+    const [ img, setImg ] = useState([])
+    const [ preco, setPreco ] = useState()
     const [ count, setCount ] = useState(0)
+
 
     const getMovies = () => {
         let url = `https://json-server-md3.onrender.com/filmes`
@@ -29,7 +31,9 @@ export default function Private() {
 
         axios.post(url, {
             nome: nome,
-            preco: preco
+            preco: Number(preco),
+            img: [img],
+            descricao: desc
         })
         .then(function (response) {
             console.log(response);
@@ -51,7 +55,9 @@ export default function Private() {
         const atualizar = { 
             id: id,
             nome: nome,
-            preco: preco,
+            preco: Number(preco),
+            img: [img],
+            descricao: desc
         };
         axios.put(`https://json-server-md3.onrender.com/filmes/${id}`, atualizar)
         setCount(count + 1)
@@ -86,15 +92,17 @@ export default function Private() {
                 submit={() => { handlePost() }} 
                 nome={(e) => setNome(e.target.value)}
                 preco={(e) => setPreco(e.target.value)}
+                img={(e) => setImg(e.target.value)}
+                desc={(e) => setDesc(e.target.value)}
             />
             <Table striped bordered hover className={style.tableContent}>
-                <thead>
+                <thead style={{textAlign: "center"}}>
                     <tr>
                     <th>ID</th>
                     <th>Nome</th>
-                    <th>preco</th>
-                    <th>-</th>
-                    <th>-</th>
+                    <th>Preço</th>
+                    <th>Ação</th>
+                    <th>Ação</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -104,7 +112,7 @@ export default function Private() {
                                 <td>{item.id}</td>
                                 <td>{item.nome}</td>
                                 <td>{item.preco}</td>
-                                <td> <Button variant="primary" 
+                                <td> <Button variant="dark" 
                                     onClick={() => { 
                                         handleUpdate( item.id, item.nome, item.preco);
                                       }}>Atualizar</Button>{' '} </td>

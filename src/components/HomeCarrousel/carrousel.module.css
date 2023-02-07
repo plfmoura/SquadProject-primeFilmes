@@ -25,10 +25,6 @@
 }
 
 @media (min-width:320px) { 
-    .carouselComponent {
-        margin-top: 5rem;
-    }
-
     .captionContainer h3 {
         margin: 0 auto;
         white-space: nowrap;
@@ -59,10 +55,6 @@
 }
 
 @media (min-width:1281px) { 
-    .carouselComponent {
-        margin-top: 8%;
-    }
-    
     .carouselImage {
         width: 100vw;
         height: 82vh;

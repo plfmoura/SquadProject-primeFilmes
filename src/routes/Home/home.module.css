@@ -33,7 +33,6 @@
         align-items: center;
         width: 100%;
         margin: 0 auto;
-
     }
     
     .alignItems {
@@ -257,7 +256,6 @@
     .home {
         background-color: #e7e5e5;
         width: 100vw;
-        margin-top: -2rem;
     }
     
     .popularContainer {
