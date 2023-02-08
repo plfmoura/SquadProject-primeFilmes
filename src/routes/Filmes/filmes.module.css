@@ -2,8 +2,6 @@
     background: linear-gradient(to right, #434343 0%, black 100%);
     width: 100%;
     min-width: 90vw;
-    min-height: 300vh;
-    margin-top: 10rem;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     display: flex;
     flex-direction: column;
@@ -23,7 +21,7 @@
 .bgFilmes {
     margin-top: -5rem;
     width: 100vw;
-    height: 70vh;
+    height: 80vh;
     background: url("https://cinearaujo.com.br/images/sp_maua_multiplex/1.png") no-repeat;
     background-size: 100%;
 }
