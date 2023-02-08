@@ -86,11 +86,11 @@ export default function Filmes() {
        
       {cart.map(item => (
           <li key={item.id} className={style.itemCarrinho}>
-            {item.nome} - ${item.preco} x {item.quantity}
+            {item.nome} - ${item.preco.toFixed(2)} x {item.quantity}
             <div className={style.cartIconClose} onClick={() => removeFromCart(item)}> <CloseIcon /> </div>
           </li>
         ))}
-        <li className={style.totalCart}>Total: R${total}</li>
+        <li className={style.totalCart}>Total: R${total.toFixed(2)}</li>
         <div className={style.btns}>
          <Button variant="primary"  onClick={() => setOpenModal2(true)}>Finalizar compra</Button>{' '}
           <Button variant="danger" onClick={() => setOpenModal(false)}>Fechar</Button>{' '}
@@ -124,7 +124,7 @@ export default function Filmes() {
             movies.map((item, key) =>
               <FilmesCard
                 image={item.img[0]}
-                preco={item.preco}
+                preco={item.preco.toFixed(2)}
                 key={key}
                 onPress={()=> addToCart(item)}
               />

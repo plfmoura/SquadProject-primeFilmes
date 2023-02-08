@@ -17,7 +17,7 @@ export default function Private() {
     const [ nome, setNome ] = useState('')
     const [ desc, setDesc ] = useState('')
     const [ img, setImg ] = useState([])
-    const [ preco, setPreco ] = useState()
+    const [ preco, setPreco ] = useState(Number)
     const [ count, setCount ] = useState(0)
 
 
@@ -111,7 +111,7 @@ export default function Private() {
                             <tr key={item.id}>
                                 <td>{item.id}</td>
                                 <td>{item.nome}</td>
-                                <td>{item.preco}</td>
+                                <td>{item.preco.toFixed(2)}</td>
                                 <td> <Button variant="dark" 
                                     onClick={() => { 
                                         handleUpdate( item.id, item.nome, item.preco);
