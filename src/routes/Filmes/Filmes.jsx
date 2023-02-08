@@ -124,7 +124,7 @@ export default function Filmes() {
             movies.map((item, key) =>
               <FilmesCard
                 image={item.img[0]}
-                preco={item.preco.toFixed(2)}
+                preco={item.preco}
                 key={key}
                 onPress={()=> addToCart(item)}
               />
