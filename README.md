@@ -12,7 +12,7 @@ Prime Videos, um site de Venda de ingressos e informações sobre lançamentos d
 <br>
 <br>
 <br>
-<img src="https://files.fm/thumb_show.php?i=vkf3a33fx" width="60%">
+<img src="https://files.fm/thumb_show.php?i=vkf3a33fx" width="65%">
 <br>
 Página <strong>FILMES</strong></p>
 </div>
