@@ -1,9 +1,9 @@
 <div align="center">
-<h1>PRIME VIDEOS</h1>
+<h1>PRIME FILMES</h1>
 
 ### Projeto módulo III - Programadores Cariocas.
 
-Prime Videos, um site de Venda de ingressos e informações sobre lançamentos de filmes, conectando o cliente ao seu cinema favorito.
+Prime Filmes, um site de Venda de ingressos e informações sobre lançamentos de filmes, conectando o cliente ao seu cinema favorito.
 </div>
 <hr/>
 <div align="center">
