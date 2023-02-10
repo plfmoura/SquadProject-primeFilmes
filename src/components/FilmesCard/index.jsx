@@ -10,7 +10,7 @@ export default function FilmesCard({ title, image, preco, onPress }) {
     return (
 <Card  
     sx={{ 
-        width: 220, 
+        width: 250, 
         height: 400, 
         display: "flex", 
         flexDirection: "column", 

@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react'
-import style from './filmes.module.css'
 import axios from 'axios'
 import FilmesCard from '../../components/FilmesCard'
 import { Button, Form } from 'react-bootstrap'
 import Loading from '../../components/Loading'
 import Modal from '../../components/ModalCart'
+import style from './filmes.module.css'
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import CloseIcon from '@mui/icons-material/Close';
 
@@ -36,10 +36,6 @@ export default function Filmes() {
       setMovies(moviesResults);
     }
   }
-
-  useEffect(()=>{
-    console.log(total)
-  }, [cart])
 
   useEffect(() => {
     setTimeout(() => {getMovies()
@@ -81,35 +77,49 @@ export default function Filmes() {
 
   return (
     <>
-      <Modal isOpen={openModal} setModalOpen={() => setOpenModal(!openModal)}>
-      <ul>
-       
-      {cart.map(item => (
-          <li key={item.id} className={style.itemCarrinho}>
-            {item.nome} - ${item.preco.toFixed(2)} x {item.quantity}
-            <div className={style.cartIconClose} onClick={() => removeFromCart(item)}> <CloseIcon /> </div>
-          </li>
-        ))}
-        <li className={style.totalCart}>Total: R${total.toFixed(2)}</li>
-        <div className={style.btns}>
-         <Button variant="primary"  onClick={() => setOpenModal2(true)}>Finalizar compra</Button>{' '}
-          <Button variant="danger" onClick={() => setOpenModal(false)}>Fechar</Button>{' '}
+      <Modal 
+        isOpen={openModal} 
+        setModalOpen={() => setOpenModal(!openModal)}
+        finalizar={() => setOpenModal2(true)}
+        fechar={() => setOpenModal(false)}
+        total={total.toFixed(2)}
+      >
+        <ul className={style.ticketContainer}>
+        {cart.map(item => (
+          <div className={style.ticketContent}>
+              <CloseIcon onClick={() => removeFromCart(item)} className={style.cartIconClose}/>
+              <li key={item.id} className={style.itemCarrinho}>
+                {item.nome} - ${item.preco.toFixed(2)} x {item.quantity}
+              </li>
           </div>
-      </ul>
+          ))}
+        </ul>
     </Modal>
     
-    <Modal
+    <Modal 
       isOpen={openModal2}
       setModalOpen={() => setOpenModal2(!openModal2)}>
-      <h3 className={style.finalCart}>Obrigado pela compra!</h3>
-      <br/>
-      <br/>
-      <center><Button variant="danger" onClick={() => {modalClose(); setCart([])}}>Fechar</Button>{' '}</center>
+        {
+          total === 0 ? (
+            <div className={style.finalCart}>
+              <h3>Seu carrinho de compras está vázio!</h3>
+              <Button variant="danger" onClick={modalClose}>Fechar</Button>{' '}
+            </div>
+          ) : (
+            <div className={style.finalCart}>
+              <h3>Obrigado pela compra!</h3>
+              <Button variant="danger" onClick={() => {modalClose(); setCart([])}}>Fechar</Button>{' '}
+            </div> )
+      }
     </Modal>
       <div className={style.filmesContainer}>
       <div className={style.bgFilmes}></div>
-      <div onClick={() => setOpenModal(true)} className={style.cartIcon}> <ShoppingCartIcon /> </div>
-
+      <div onClick={() => setOpenModal(true)} className={style.alignCartIcon}> 
+        {
+          total === 0 ? (<div className={style.cartIcon}><ShoppingCartIcon /></div> ) 
+          : ( <div className={style.cartIconTrue}><ShoppingCartIcon /><span>R${total.toFixed(2)}</span></div>) 
+        } 
+      </div>
         <Form className={style.searchInput}>
           <Form.Control
             type="search"
@@ -117,7 +127,7 @@ export default function Filmes() {
             aria-label="Search"
             onChange={(e) => moviesFilter(e.target.value)}
           />
-          <Button variant="light">Search</Button>
+          <Button variant="light">Buscar</Button>
         </Form>
         <div className={style.filmesContent}>
           {
@@ -137,4 +147,3 @@ export default function Filmes() {
     </>
   )
 }
-
