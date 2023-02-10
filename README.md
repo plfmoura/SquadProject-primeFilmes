@@ -38,3 +38,9 @@ Página <strong>FILMES</strong></p>
 Repositório da API REST utilizada : <a href="https://github.com/WillianXG/json-server_mld3">clique aqui</a>
 
 Servidor Render (API REST utilizada): <a href="https://json-server-md3.onrender.com/">clique aqui</a>
+
+### Contribuidores: 
+
+<a href="https://github.com/plfmoura/SquadProject-primeFilmes/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=plfmoura/SquadProject-primeFilmes" />
+</a>
