@@ -7,9 +7,12 @@ ul{
     list-style: none;
 }
 
+.titleDiv {
+    text-align: center;
+}
 .titleModal{
-    display: flex;
-    justify-content: start;
+    margin-top: .3rem;
+    font-size: 1.1rem;
 }
 
 .btnModal {

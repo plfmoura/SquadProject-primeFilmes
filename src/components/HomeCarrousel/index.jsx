@@ -1,3 +1,4 @@
+import { CarouselItem } from 'react-bootstrap';
 import Carousel from 'react-bootstrap/Carousel';
 import style from './carrousel.module.css'
 
