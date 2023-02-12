@@ -57,8 +57,12 @@ export default function Home() {
     infinite: false,
     speed: 500,
     slidesToShow: 4,
-    slidesToScroll: 4,
+    slidesToScroll: 2,
     initialSlide: 0,
+    autoplay: true,
+    speed: 1200,
+    autoplaySpeed: 1000,
+    cssEase: "linear",
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
     responsive: [
