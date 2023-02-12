@@ -1,10 +1,13 @@
 import axios from 'axios'
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, Component } from 'react'
 import Contador from '../../components/Contador'
 import HomeCard from '../../components/HomeCard'
 import HomeCardPrincipal from '../../components/HomeCardPrincipal'
 import HomeCarrousel from '../../components/HomeCarrousel'
 import style from './home.module.css'
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
 
 export default function Home() {
 
@@ -25,6 +28,86 @@ export default function Home() {
   useEffect(() => {
     getMovies()
   }, [])
+
+  function SampleNextArrow(props) {
+    const { className, style, onClick } = props;
+    return (
+      <div
+        className={className}
+        style={{ ...style, display: "block", background: "red", marginRight: "5rem", position: "absolute", zIndex: "100" }}
+        onClick={onClick}
+      />
+    );
+  }
+   
+  function SamplePrevArrow(props) {
+    const { className, style, onClick } = props;
+    return (
+      <div
+        className={className}
+        style={{ ...style, display: "block", background: "green", marginLeft: "5rem", position: "absolute", zIndex: "100" }}
+        onClick={onClick}
+      />
+    );
+  }
+
+ 
+  const settings = {
+    dots: true,
+    infinite: false,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 2,
+    initialSlide: 0,
+    autoplay: true,
+    speed: 1200,
+    autoplaySpeed: 1000,
+    cssEase: "linear",
+    nextArrow: <SampleNextArrow />,
+    prevArrow: <SamplePrevArrow />,
+    responsive: [
+      {
+        breakpoint: 1140,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: false,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 840,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: false,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 760,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2
+        }
+      },
+      {
+        breakpoint: 630,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 530,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  };
 
   return (
     <div className={style.home}>
@@ -69,13 +152,14 @@ export default function Home() {
           <h2>Filmes em cartaz</h2>
           <p>Veja o nosso Top 10 filmes mais assistidos da semana.</p>
         </div>
-        <div className={style.filmesContent}>
-        {
-          movies.map(( item, key ) => 
-            <HomeCard image={item.data.img[0]} key={key} id={item.data.id} title={item.data.nome} />
-          )
-        }          
-        </div>
+        {/*  */}
+          <Slider {...settings} className={style.filmesContent}>
+            {
+              movies.map(( item, key ) => 
+                <HomeCard image={item.data.img[0]} key={key} id={item.data.id} title={item.data.nome} />
+              )
+            }          
+          </Slider>
       </div>
     </div>
   )
