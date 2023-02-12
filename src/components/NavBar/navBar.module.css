@@ -16,6 +16,7 @@
     margin: 0 auto;
     width: 95%;
     display: flex;
+    align-items: center;
     justify-content: space-between;
 }
 
@@ -62,7 +63,6 @@
 }
 
 .menuNavigation {
-    margin-top: 1rem;
     list-style: none;
     display: flex;
     justify-content: space-evenly;
