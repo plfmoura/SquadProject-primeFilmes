@@ -6,8 +6,9 @@ import HomeCardPrincipal from '../../components/HomeCardPrincipal'
 import HomeCarrousel from '../../components/HomeCarrousel'
 import style from './home.module.css'
 import "slick-carousel/slick/slick.css"; 
-import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
+import NextArrow from '../../components/ArrowCarousel/NextArrow'
+import PrevArrow from '../../components/ArrowCarousel/PrevArrow'
 
 export default function Home() {
 
@@ -29,42 +30,19 @@ export default function Home() {
     getMovies()
   }, [])
 
-  function SampleNextArrow(props) {
-    const { className, style, onClick } = props;
-    return (
-      <div
-        className={className}
-        style={{ ...style, display: "block", background: "red", marginRight: "5rem", position: "absolute", zIndex: "100" }}
-        onClick={onClick}
-      />
-    );
-  }
-   
-  function SamplePrevArrow(props) {
-    const { className, style, onClick } = props;
-    return (
-      <div
-        className={className}
-        style={{ ...style, display: "block", background: "green", marginLeft: "5rem", position: "absolute", zIndex: "100" }}
-        onClick={onClick}
-      />
-    );
-  }
-
- 
+// carousel settings
   const settings = {
     dots: true,
-    infinite: false,
+    infinite: true,
     speed: 500,
     slidesToShow: 4,
-    slidesToScroll: 2,
+    slidesToScroll: 4,
     initialSlide: 0,
-    autoplay: true,
-    speed: 1200,
-    autoplaySpeed: 1000,
-    cssEase: "linear",
-    nextArrow: <SampleNextArrow />,
-    prevArrow: <SamplePrevArrow />,
+    autoplay: false,
+    speed: 2000,
+    cssEase: "ease",
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />,
     responsive: [
       {
         breakpoint: 1140,
@@ -152,7 +130,6 @@ export default function Home() {
           <h2>Filmes em cartaz</h2>
           <p>Veja o nosso Top 10 filmes mais assistidos da semana.</p>
         </div>
-        {/*  */}
           <Slider {...settings} className={style.filmesContent}>
             {
               movies.map(( item, key ) => 
