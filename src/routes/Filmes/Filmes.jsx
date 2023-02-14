@@ -75,6 +75,9 @@ export default function Filmes() {
 
   const total = cart.reduce((sum, item) => sum + item.preco, 0);  ''
 
+  // video commands
+  const video = document.querySelector('#video-background')
+
   return (
     <>
       <Modal 
@@ -113,13 +116,24 @@ export default function Filmes() {
       }
     </Modal>
       <div className={style.filmesContainer}>
-      <div className={style.bgFilmes}></div>
-      <div onClick={() => setOpenModal(true)} className={style.alignCartIcon}> 
-        {
-          total === 0 ? (<div className={style.cartIcon}><ShoppingCartIcon /></div> ) 
-          : ( <div className={style.cartIconTrue}><ShoppingCartIcon /><span>R${total.toFixed(2)}</span></div>) 
-        } 
-      </div>
+        <div className={style.bgFilmes} onMouseEnter={() => video.play()}>
+          <div className={style.bgImage}>
+            <video src="public/videos/couple-cinema.mp4" loop id="video-background"/>
+          </div>
+          <div className={style.anuncioContainer}>
+            <h2>Venha para o <span>Pipoca Prime,</span></h2>
+            <p>e concorra a Prêmios exclusivos para assinantes!!!</p>
+            <a href="#">ver mais!</a>
+          </div>
+          <div className={style.bgOverlay}></div>
+        </div>
+
+        <div onClick={() => setOpenModal(true)} className={style.alignCartIcon}> 
+          {
+            total === 0 ? (<div className={style.cartIcon}><ShoppingCartIcon /></div> ) 
+            : ( <div className={style.cartIconTrue}><ShoppingCartIcon /><span>R${total.toFixed(2)}</span></div>) 
+          } 
+        </div>
         <Form className={style.searchInput}>
           <Form.Control
             type="search"

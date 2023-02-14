@@ -90,7 +90,7 @@
         height: 75vh;
         display: flex;
         align-items: center;
-        overflow: auto;
+        overflow: hidden;
         margin: 0 auto;
         background: linear-gradient(90deg, #cecdcd00, #f1f1f121, #f1f1f152, #f1f1f121, #cecdcd00 );
     }
