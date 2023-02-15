@@ -118,12 +118,10 @@ export default function Filmes() {
       <div className={style.filmesContainer}>
         <div className={style.bgFilmes} onMouseEnter={() => video.play()}>
           <div className={style.bgImage}>
-            <video src="public/videos/couple-cinema.mp4" loop id="video-background"/>
+            <video src="./public/videos/people-watching.mp4" loop id="video-background"/>
           </div>
           <div className={style.anuncioContainer}>
-            <h2>Venha para o <span>Pipoca Prime,</span></h2>
-            <p>e concorra a Prêmios exclusivos para assinantes!!!</p>
-            <a href="#">ver mais!</a>
+            {/* area para anuncio */}
           </div>
           <div className={style.bgOverlay}></div>
         </div>
