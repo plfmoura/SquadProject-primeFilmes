@@ -21,8 +21,6 @@
 .bgImage {
     width: 90%;
     height: 100%;
-    background: url("public/videos/couple-cinema.mp4") no-repeat;
-    background-size: 100%;
     position: absolute;
     z-index: 5;
     display: flex;
@@ -37,33 +35,23 @@
 .anuncioContainer {
     position: absolute;
     z-index: 7;
-    background-color: #fffffff1;
-    text-align: center;
-    padding: 1rem 0;
+    margin-top: 20rem;
+    width: 60%;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.300) 28%, rgba(0, 0, 0, 0.300) 72%, rgba(0, 0, 0, 0) 100%);
+    padding: 2rem;
 }
 
-.anuncioContainer h2 {
-    padding: 0 2rem;
-}
-
-.anuncioContainer h2 span {
-    font-weight: 600;
-    text-transform: uppercase;
-}
-
-.anuncioContainer p span {
-    font-size: .8rem;
-}
-
-.anuncioContainer a {
-    text-decoration: none;
+.searchContent {
+    display: flex;
+    width: 60%;
+    margin: 0 auto;
 }
 
 .bgOverlay {
     width: 100%;
     height: 100%;
     background: rgb(0,0,0);
-    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 10%, rgba(255,255,255,0) 28%, rgba(255,255,255,0) 72%, rgba(0,0,0,1) 90%, rgba(0,0,0,1) 100%);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 5%, rgba(255,255,255,0) 28%, rgba(255,255,255,0) 72%, rgba(0,0,0,1) 95%, rgba(0,0,0,1) 100%);
     position: absolute;
     z-index: 6;
 }
@@ -76,12 +64,6 @@
 
 .itemCarrinho {
     display: flex;
-}
-
-.searchInput {
-    margin: 0 auto 2rem;
-    display: flex;
-    width: 40%;
 }
 
 .titulo {
