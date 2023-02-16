@@ -119,7 +119,7 @@ export default function Filmes() {
       <div className={style.filmesContainer}>
         <div className={style.bgFilmes} onMouseEnter={() => video.play()}>
           <div className={style.bgImage}>
-            <video src="public/videos/people-watching.mp4" loop id="video-background"/>
+            <video src="./public/videos/people-watching.mp4" loop id="video-background"/>
           </div>
           <div className={style.anuncioContainer}>
             <Form className={style.searchContent}>
