@@ -35,26 +35,16 @@
 .anuncioContainer {
     position: absolute;
     z-index: 7;
-    background-color: #fffffff1;
-    text-align: center;
-    padding: 1rem 0;
+    margin-top: 20rem;
+    width: 60%;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.300) 28%, rgba(0, 0, 0, 0.300) 72%, rgba(0, 0, 0, 0) 100%);
+    padding: 2rem;
 }
 
-.anuncioContainer h2 {
-    padding: 0 2rem;
-}
-
-.anuncioContainer h2 span {
-    font-weight: 600;
-    text-transform: uppercase;
-}
-
-.anuncioContainer p span {
-    font-size: .8rem;
-}
-
-.anuncioContainer a {
-    text-decoration: none;
+.searchContent {
+    display: flex;
+    width: 60%;
+    margin: 0 auto;
 }
 
 .bgOverlay {
@@ -74,12 +64,6 @@
 
 .itemCarrinho {
     display: flex;
-}
-
-.searchInput {
-    margin: 0 auto 2rem;
-    display: flex;
-    width: 40%;
 }
 
 .titulo {

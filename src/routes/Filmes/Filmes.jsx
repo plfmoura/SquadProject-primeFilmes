@@ -15,6 +15,7 @@ export default function Filmes() {
   const [cart, setCart] = useState([]);
   const [openModal2, setOpenModal2] = useState(false)
   const [openModal, setOpenModal] = useState(false)
+  const [search, setSearch] = useState('')
 
   const getMovies = () => {
     let url = `https://json-server-md3.onrender.com/filmes`
@@ -121,27 +122,27 @@ export default function Filmes() {
             <video src="public/videos/people-watching.mp4" loop id="video-background"/>
           </div>
           <div className={style.anuncioContainer}>
-            {/* area para anuncio */}
+            <Form className={style.searchContent}>
+              <Form.Control
+                type="search"
+                className="me-2"
+                id={style.inputSearch}
+                aria-label="Search"
+                placeholder='Busque por filmes...'
+                onChange={(e) => setSearch(e.target.value)}
+              />
+              <Button href='#filmesContent' variant="light" onClick={() => moviesFilter(search)}>Buscar</Button>
+            </Form>
           </div>
           <div className={style.bgOverlay}></div>
         </div>
-
         <div onClick={() => setOpenModal(true)} className={style.alignCartIcon}> 
           {
-            total === 0 ? (<div className={style.cartIcon}><ShoppingCartIcon /></div> ) 
+            total === 0 ? (<div className={style.cartIcon}><ShoppingCartIcon /></div>) 
             : ( <div className={style.cartIconTrue}><ShoppingCartIcon /><span>R${total.toFixed(2)}</span></div>) 
           } 
         </div>
-        <Form className={style.searchInput}>
-          <Form.Control
-            type="search"
-            className="me-2"
-            aria-label="Search"
-            onChange={(e) => moviesFilter(e.target.value)}
-          />
-          <Button variant="light">Buscar</Button>
-        </Form>
-        <div className={style.filmesContent}>
+        <div className={style.filmesContent} id="filmesContent">
           {
             movies.map((item, key) =>
               <FilmesCard
@@ -151,10 +152,10 @@ export default function Filmes() {
                 onPress={()=> addToCart(item)}
               />
             )
-
           }
             {!loading && <Loading />}
         </div>
+        <a href="#filmesContent" onClick={getMovies}>Mostrar Todos os Filmes</a>
       </div>
     </>
   )
